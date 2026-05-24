@@ -1,0 +1,41 @@
+Name,Short,Index,RS,TS,WS,AC,MT,CC
+,,,,,,,,
+Baby Peach,bpeach,0,0,0,0,7,4,9
+,,,,,,,,
+Baby Mario,bmario,1,1,0,0,6,3,8
+,,,,,,,,
+Baby Luigi,bluigi,2,0,1,0,6,3,8
+,,,,,,,,
+Baby Rosalina,brosa,3,0,0,1,6,3,8
+,,,,,,,,
+Toadette,toadette,4,2,1,1,5,3,7
+,,,,,,,,
+Toad,toad,5,1,2,1,5,3,7
+,,,,,,,,
+Koopa Troopa,koopa,6,1,1,2,5,3,7
+,,,,,,,,
+Daisy,daisy,7,3,2,2,4,2,5
+,,,,,,,,
+Yoshi,yoshi,8,2,3,2,4,2,5
+,,,,,,,,
+Bowser Jr.,bowserjr,9,2,2,3,4,2,5
+,,,,,,,,
+Mario,mario,10,4,3,3,3,1,4
+,,,,,,,,
+Luigi,luigi,11,3,4,3,3,1,4
+,,,,,,,,
+Penguin,penguin,12,3,3,4,3,1,4
+,,,,,,,,
+Pauline,pauline,13,5,4,4,2,0,2
+,,,,,,,,
+King Boo,kboo,14,4,5,4,2,0,2
+,,,,,,,,
+Rosalina,rosa,15,4,4,5,2,0,2
+,,,,,,,,
+Wario,wario,16,6,5,5,1,0,1
+,,,,,,,,
+Chargin' Chuck,chuck,17,5,6,5,1,0,1
+,,,,,,,,
+Waluigi,waluigi,18,5,5,6,1,0,1
+,,,,,,,,
+Bowser,bowser,19,6,6,6,0,0,0

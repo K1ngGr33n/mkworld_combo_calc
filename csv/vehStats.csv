@@ -1,0 +1,49 @@
+Name,Short,Index,RS,TS,WS,AC,MT,CC
+,,,,,,,,
+Standard Bike,sbike,0,1,1,1,9,9,6
+,,,,,,,,
+Pipe Frame,pframe,1,2,2,2,8,8,5
+,,,,,,,,
+Loco Moto,lmoto,2,4,4,4,6,6,5
+,,,,,,,,
+Standard Kart,skart,3,5,5,5,5,5,4
+,,,,,,,,
+Blastronaut III,blastronaut,4,5,5,5,6,6,3
+,,,,,,,,
+W-Twin Chopper,wtwin,5,7,7,7,3,3,4
+,,,,,,,,
+Reel Racer,reel,6,8,8,8,2,2,3
+,,,,,,,,
+Junkyard Hog,junkyard,7,8,8,8,3,3,2
+,,,,,,,,
+Dread Sled,dsled,8,3,9,5,3,3,3
+,,,,,,,,
+Stellar Sled,ssled,9,6,8,11,0,0,1
+,,,,,,,,
+R.O.B. H.O.G.,rob,10,6,1,1,7,7,6
+,,,,,,,,
+Baby Blooper,blooper,11,7,2,2,6,6,5
+,,,,,,,,
+B-Dasher,bdasher,12,8,4,4,4,4,3
+,,,,,,,,
+Big Horn,bhorn,13,9,6,6,2,2,1
+,,,,,,,,
+Rallygator,rgator,14,9,6,6,3,3,0
+,,,,,,,,
+Rally Bike,rbike,15,0,5,0,8,8,6
+,,,,,,,,
+Biddybuggy,bbuggy,16,1,6,1,7,7,5
+,,,,,,,,
+Rally Kart,rkart,17,4,8,4,4,4,3
+,,,,,,,,
+Chargin' Truck,ctruck,18,7,10,7,1,1,1
+,,,,,,,,
+Dolphin Dasher,ddasher,19,0,0,5,8,8,6
+,,,,,,,,
+Cloud 9,cloud9,20,4,4,8,4,4,3
+,,,,,,,,
+Funky Dorrie,fdorrie,21,4,4,8,5,5,2
+,,,,,,,,
+Mecha Trike,mtrike,22,7,7,10,1,1,1
+,,,,,,,,
+Lobster Roller,lroller,23,7,7,10,2,2,0
