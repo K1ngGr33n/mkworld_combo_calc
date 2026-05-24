@@ -157,7 +157,7 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
                 totalTimeNew = 0
                 coins = 0
                 i+=1
-                # print(f"Calculated {c}, {v}, {i}/480")
+                print(f"Calculated {c}, {v}, {i}/480")
     
     return finalTimes
 
