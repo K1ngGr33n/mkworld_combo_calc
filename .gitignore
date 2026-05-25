@@ -1,5 +1,6 @@
 timings/
 __pycache__/
+timings.txt
 results.txt
 STEPS.md
 test.py
