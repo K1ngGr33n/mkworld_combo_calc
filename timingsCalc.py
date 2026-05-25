@@ -142,13 +142,13 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
                 for s in range(len(timings)-1): # loop through sections
                     if(timings[s][1] != "e"): # loop has not reached end
                         sectionTimeBase = timings[s+1][0] - timings[s][0] # calculate base time in section
-                        if(timings[s][1] == "c"): # coin collection
+                        if(timings[s][1].lower() == "c"): # coin collection
                             coins += 1
                         else: # no coin collection: switch gt
                             groundType = timings[s][1]
 
                         # calculate new section time + total time
-                        sectionTimeNew = calcTimeDiff(sectionTimeBase, [c, v], groundType, coins) 
+                        sectionTimeNew = calcTimeDiff(sectionTimeBase, [c, v], groundType.lower(), coins) 
                         totalTimeNew += sectionTimeNew
 
                 finalTimes.append([st.getNames([c, v]), totalTimeNew]) # add to list
