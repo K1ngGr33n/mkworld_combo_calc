@@ -9,7 +9,7 @@ def exAsTxtFile(orgFile: str, filepath: str, times):
     with open(f"{filepath}.txt", "w", encoding="utf-8") as tmFile:
         tmFile.seek(0)
         tmFile.write(formattedText)
-    print(f'Successfully wrote to "{filepath}.txr"')
+    print(f'Successfully wrote to "{filepath}.txt"')
 
 # def exAsCsvFile(filepath: str, times):
 #     """wip"""
