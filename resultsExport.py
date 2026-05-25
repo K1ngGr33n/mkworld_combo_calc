@@ -4,7 +4,7 @@ def exAsTxtFile(orgFile: str, filepath: str, times):
 
     for e in times:
         # write line       [        timestamp         ]   [  char  ]  [  veh  ]
-        formattedText += f"{tC.milsToTime(round(e[1]))} - {e[0][0]} / {e[0][1]}\n"
+        formattedText += f"\n{tC.milsToTime(round(e[1]))} - {e[0][0]} / {e[0][1]}"
     
     with open(f"{filepath}.txt", "w", encoding="utf-8") as tmFile:
         tmFile.seek(0)
