@@ -1,16 +1,14 @@
-import os
+import resultsExport as rX
 import timingsCalc as tC
 
 filePathTimings = "timings.txt"
-fileNameResults = "results.txt"
+fileNameResults = "results"
 
 listOfTimings = tC.readTextFile(filePathTimings)
 print(listOfTimings)
 
+# calculate everything
 result = tC.calcLoop(listOfTimings)
+resultSorted = sorted(result, key=lambda x: x[1]) # sort values
 
-resultSorted = sorted(result, key=lambda x: x[1])
-
-with open(fileNameResults, 'w', encoding='utf-8') as file:
-    file.write(str(resultSorted))
-print(f"Successfully wrote to '{fileNameResults}'.")
+rX.exAsTxtFile(filePathTimings, fileNameResults, resultSorted)

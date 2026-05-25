@@ -106,11 +106,11 @@ def calcTimeDiff(baseTime: float, newCombo: int, groundType: str, coinCount: int
     newSpeed = 100.0
 
     if pos < 3: # road/terrain/water
-        newSpeed = (100 + (0.312 * newStats[0][pos])) * (1 + (newStats[1][coinCount])/100)
-        baseSpeed = (100 + (0.312 * baseValues[0][pos])) * (1 + (baseValues[1][coinCount])/100)
+        newSpeed = (100 + (0.312 * newStats[0][pos])) * (1 + newStats[1][coinCount]/100)
+        baseSpeed = (100 + (0.312 * baseValues[0][pos])) * (1 + baseValues[1][coinCount]/100)
     elif pos < 5: # neutral/offroad
-        newSpeed = (100 + (0.312 * 11)) * (1 + newStats[1][coinCount])
-        baseSpeed = (100 + (0.312 * 11)) * (1 + baseValues[1][coinCount])
+        newSpeed = 100 * (1 + newStats[1][coinCount]/100)
+        baseSpeed = 100 * (1 + baseValues[1][coinCount]/100)
     else: # none
         return baseTime
 
