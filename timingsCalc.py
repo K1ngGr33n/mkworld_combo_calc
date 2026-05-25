@@ -69,7 +69,7 @@ def milsToTime(inputTime: int):
     inputTime = int(round(inputTime))
 
     mins = str(inputTime // 60000)
-    secs = str((inputTime % 60000) // 1000)[:2].ljust(2, "0")
+    secs = str((inputTime % 60000) // 1000)[:2].rjust(2, "0")
     mils = str(inputTime % 1000)[:3].ljust(3, "0")
     
     timestamp = f"{mins}:{secs}.{mils}"
@@ -142,7 +142,7 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
                 for s in range(len(timings)-1): # loop through sections
                     if(timings[s][1] != "e"): # loop has not reached end
                         sectionTimeBase = timings[s+1][0] - timings[s][0] # calculate base time in section
-                        if(timings[s][1].lower() == "c"): # coin collection
+                        if(timings[s][1].lower() == "c" and coins < 20): # coin collection
                             coins += 1
                         else: # no coin collection: switch gt
                             groundType = timings[s][1]
