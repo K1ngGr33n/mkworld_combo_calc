@@ -9,6 +9,7 @@ print(listOfTimings)
 
 # calculate everything
 result = tC.calcLoop(listOfTimings)
+# trueResult = result[1:]
 resultSorted = sorted(result, key=lambda x: x[1]) # sort values
 
-rX.exAsTxtFile(filePathTimings, fileNameResults, resultSorted)
+rX.exAsTxtFile(filePathTimings, fileNameResults, resultSorted, result[0])
