@@ -71,7 +71,7 @@ def milsToTime(inputTime: int):
 
     mins = str(inputTime // 60000)
     secs = str((inputTime % 60000) // 1000)[:2].rjust(2, "0")
-    mils = str(inputTime % 1000)[:3].ljust(3, "0")
+    mils = str(inputTime % 1000)[:3].rjust(3, "0")
     
     timestamp = f"{mins}:{secs}.{mils}"
 
