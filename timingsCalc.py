@@ -25,7 +25,6 @@ def readTextFile(filePath: str):
         tmFile.seek(0)
         baseIndex = tmFile.readline().split()
         baseValues = st.getStats(baseIndex)
-        # print(baseValues)
 
         # separate into sections
         for l in tmFile:
@@ -143,7 +142,7 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
     limitC = []
     limitV = []
 
-    # baseTimesDone = False
+    baseTimesDone = False
 
     gts = ["r", "t", "w", "n", "o", "x"]
     gtTimes = [0, 0, 0, 0, 0, 0]
@@ -161,24 +160,24 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
                     else: # no coin collection: switch gt
                         groundType = timings[s][1]
 
-                        # measure total amount of each ground type
-                        # if baseTimesDone == False:
-                        #     pos = gts.index(groundType.lower())
-                        #     if pos < 3 or pos == 5: # gt is r, t, w, or x
-                        #         gtTimes[pos] += sectionTimeBase
-                        #     elif pos < 5: # gt is n or o
-                        #         if coins != 0 and coins != 20:
-                        #             gtTimes[pos] += sectionTimeBase
-                        #         else: 
-                        #             gtTimes[5] += sectionTimeBase
+                    # measure total amount of each ground type
+                    if baseTimesDone == False:
+                        pos = gts.index(groundType.lower())
+                        if pos < 3 or pos == 5: # gt is r, t, w, or x
+                            gtTimes[pos] += sectionTimeBase
+                        elif pos < 5: # gt is n or o
+                            if coins != 0 and coins != 20:
+                                gtTimes[pos] += sectionTimeBase
+                            else: 
+                                gtTimes[5] += sectionTimeBase
                     
                     # calculate new section time + total time
                     sectionTimeNew = calcTimeDiff(sectionTimeBase, [c, v], groundType.lower(), coins) 
                     totalTimeNew += sectionTimeNew
 
-            # if baseTimesDone == False:
-            #     finalTimes.append(gtTimes)
-            #     baseTimesDone = True
+            if baseTimesDone == False:
+                finalTimes.append(gtTimes)
+                baseTimesDone = True
 
             finalTimes.append([st.getNames([c, v]), totalTimeNew]) # add to list
 

@@ -5,11 +5,10 @@ filePathTimings = "timings.txt"
 fileNameResults = "results"
 
 listOfTimings = tC.readTextFile(filePathTimings)
-# print(listOfTimings)
 
 # calculate everything
 result = tC.calcLoop(listOfTimings)
-# trueResult = result[1:]
-resultSorted = sorted(result, key=lambda x: x[1]) # sort values
+trueResult = result[1:]
+resultSorted = sorted(trueResult, key=lambda x: x[1]) # sort values
 
 rX.exAsTxtFile(filePathTimings, fileNameResults, resultSorted, result[0])

@@ -1,10 +1,18 @@
 import timingsCalc as tC
 def exAsTxtFile(orgFile: str, filepath: str, times, gtTimes):
-    formattedText = f'''Read from file "{orgFile}":\n'''
-# Road: {tC.milsToTime(gtTimes[0])} | Terrain: {tC.milsToTime(gtTimes[1])} | Water: {tC.milsToTime(gtTimes[2])}
-# Neutral: {tC.milsToTime(gtTimes[3])} | Offroad: {tC.milsToTime(gtTimes[4])} | None: {tC.milsToTime(gtTimes[5])}
-# Total Time: {tC.milsToTime(gtTimes[0] + gtTimes[1] + gtTimes[2] + gtTimes[3] + gtTimes[4] + gtTimes[5])}
-# '''
+    # individual GT times
+    totalTime = gtTimes[0] + gtTimes[1] + gtTimes[2] + gtTimes[3] + gtTimes[4] + gtTimes[5]
+    gts, prct = [], []
+    for e in gtTimes:
+        gts.append(tC.milsToTime(e))
+        prct.append(round(e / totalTime * 100, 2))
+
+    # start of results file
+    formattedText = f'''Read from file "{orgFile}":
+Road: {gts[0]} ({prct[0]}%) | Terrain: {gts[1]} ({prct[1]}%) | Water: {gts[2]} ({prct[2]}%)
+Neutral: {gts[3]} ({prct[3]}%) | Offroad: {gts[4]} ({prct[4]}%) | None: {gts[5]} ({prct[5]}%)
+Total Time: {tC.milsToTime(totalTime)}
+'''
 
     for e in times:
         # write line       [        timestamp         ]   [  char  ]  [  veh  ]
