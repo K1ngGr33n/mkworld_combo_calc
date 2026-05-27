@@ -5,6 +5,8 @@ Note: This program **cannot calculate** time differences from **Acceleration, Ha
 
 You can find my own test results in [this document.](https://docs.google.com/document/d/1vZDuUWTfXXjkFKGuCVNkZw4yabM3KSRRKyNxEDxHIqA/edit?tab=t.wq6qf5cgyyrz)
 
+_Inspired by a similar project from [cypress](https://github.com/cypress-city)_
+
 <hr>
 
 ## How to use
