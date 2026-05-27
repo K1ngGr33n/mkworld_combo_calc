@@ -153,41 +153,42 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
 
         for v in limitV if limitV != [] else range(24): # loop vehicles
 
-            if [c, v] != baseIndex: # break if current combo is baseline
-                for s in range(len(timings)-1): # loop through sections
-                    if timings[s][1] != "e": # loop has not reached end
-                        sectionTimeBase = timings[s+1][0] - timings[s][0] # calculate base time in section
-                        if timings[s][1].lower() == "c" and coins < 20: # coin collection
-                            coins += 1
-                        else: # no coin collection: switch gt
-                            groundType = timings[s][1]
+            for s in range(len(timings)-1): # loop through sections
+                if timings[s][1] != "e": # loop has not reached end
+                    sectionTimeBase = timings[s+1][0] - timings[s][0] # calculate base time in section
+                    if timings[s][1].lower() == "c" and coins < 20: # coin collection
+                        coins += 1
+                    else: # no coin collection: switch gt
+                        groundType = timings[s][1]
 
-                            # measure total amount of each ground type
-                            # if baseTimesDone == False:
-                            #     pos = gts.index(groundType.lower())
-                            #     if pos < 3 or pos == 5: # gt is r, t, w, or x
-                            #         gtTimes[pos] += sectionTimeBase
-                            #     elif pos < 5: # gt is n or o
-                            #         if coins != 0 and coins != 20:
-                            #             gtTimes[pos] += sectionTimeBase
-                            #         else: 
-                            #             gtTimes[5] += sectionTimeBase
-                        
-                        # calculate new section time + total time
-                        sectionTimeNew = calcTimeDiff(sectionTimeBase, [c, v], groundType.lower(), coins) 
-                        totalTimeNew += sectionTimeNew
+                        # measure total amount of each ground type
+                        # if baseTimesDone == False:
+                        #     pos = gts.index(groundType.lower())
+                        #     if pos < 3 or pos == 5: # gt is r, t, w, or x
+                        #         gtTimes[pos] += sectionTimeBase
+                        #     elif pos < 5: # gt is n or o
+                        #         if coins != 0 and coins != 20:
+                        #             gtTimes[pos] += sectionTimeBase
+                        #         else: 
+                        #             gtTimes[5] += sectionTimeBase
+                    
+                    # calculate new section time + total time
+                    sectionTimeNew = calcTimeDiff(sectionTimeBase, [c, v], groundType.lower(), coins) 
+                    totalTimeNew += sectionTimeNew
 
-                # if baseTimesDone == False:
-                #     finalTimes.append(gtTimes)
-                #     baseTimesDone = True
+            # if baseTimesDone == False:
+            #     finalTimes.append(gtTimes)
+            #     baseTimesDone = True
 
-                finalTimes.append([st.getNames([c, v]), totalTimeNew]) # add to list
+            finalTimes.append([st.getNames([c, v]), totalTimeNew]) # add to list
 
-                # reset variables
-                totalTimeNew = 0
-                coins = 0
-                i+=1
-                print(f"Calculated {c}, {v}, {i}/{(len(limitC) if limitC != [] else 20) * (len(limitV) if limitV != [] else 24)}")
+            # reset variables
+            totalTimeNew = 0
+            coins = 0
+            i+=1
+            
+            cN = st.getNames([c, v])
+            print(f"Calculated {i}/{(len(limitC) if limitC != [] else 20) * (len(limitV) if limitV != [] else 24)} ({cN[0]} / {cN[1]})")
 
     endTime = time.perf_counter()
 
