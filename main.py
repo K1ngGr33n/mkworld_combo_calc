@@ -5,7 +5,7 @@ filePathTimings = "timings.txt"
 fileNameResults = "results"
 
 listOfTimings = tC.readTextFile(filePathTimings)
-print(listOfTimings)
+# print(listOfTimings)
 
 # calculate everything
 result = tC.calcLoop(listOfTimings)

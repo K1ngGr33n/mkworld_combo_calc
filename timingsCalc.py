@@ -25,7 +25,7 @@ def readTextFile(filePath: str):
         tmFile.seek(0)
         baseIndex = tmFile.readline().split()
         baseValues = st.getStats(baseIndex)
-        print(baseValues)
+        # print(baseValues)
 
         # separate into sections
         for l in tmFile:

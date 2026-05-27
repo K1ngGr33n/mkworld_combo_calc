@@ -3,6 +3,8 @@ This program takes in the data from a run (with ground type and coin changes) an
 
 Note: This program **cannot calculate** time differences from **Acceleration, Handling or Mini-Turbo**, it is meant strictly for the difference in **Speed.**
 
+You can find my own test results in [this document.](https://docs.google.com/document/d/1vZDuUWTfXXjkFKGuCVNkZw4yabM3KSRRKyNxEDxHIqA/edit?tab=t.wq6qf5cgyyrz)
+
 <hr>
 
 ## How to use
@@ -19,7 +21,7 @@ git clone https://github.com/K1ngGr33n/mkworld_combo_calc.git
 The first line contains the combo used in the run. You must encode it using 2 numbers that represent the character and vehicle:
 
 ```4 11```
-<sup>(example: Toadette / Baby Blooper.)</sup>
+(example: Toadette / Baby Blooper.)
 ~~You can find all the numbers here: [INDEXLIST.md](INDEXLIST.md)~~ TODO: ADD THIS
 
 #### Events
