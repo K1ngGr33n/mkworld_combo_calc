@@ -137,14 +137,22 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
     coins = 0
     i = 0
 
+    # cMin, cMax = 0, 6 # 20
+    # vMin, vMax = 6, 18 # 24
+
+    limitC = []
+    limitV = []
+
     # baseTimesDone = False
 
     gts = ["r", "t", "w", "n", "o", "x"]
     gtTimes = [0, 0, 0, 0, 0, 0]
 
     startTime = time.perf_counter()
-    for c in range(20) if fixedChar == "" else range(fixedChar-1, fixedChar): # loop characters
-        for v in range(24) if fixedVeh == "" else range(fixedVeh-1, fixedVeh): # loop vehicles
+    for c in limitC if limitC != [] else range(20): # loop characters
+
+        for v in limitV if limitV != [] else range(24): # loop vehicles
+
             if [c, v] != baseIndex: # break if current combo is baseline
                 for s in range(len(timings)-1): # loop through sections
                     if timings[s][1] != "e": # loop has not reached end
@@ -179,11 +187,11 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
                 totalTimeNew = 0
                 coins = 0
                 i+=1
-                print(f"Calculated {c}, {v}, {i}/480")
+                print(f"Calculated {c}, {v}, {i}/{(len(limitC) if limitC != [] else 20) * (len(limitV) if limitV != [] else 24)}")
 
     endTime = time.perf_counter()
 
     print(f"Calculation done ({endTime - startTime}s)")
     return finalTimes
 
-# print(calcTimeDiff(10000.0, [19, 6], "x", 10))
+# print(milsToTime(65369.0 + 0 + 35843.0 + 27726.0 + 238.0 + 128.0))
