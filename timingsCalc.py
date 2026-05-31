@@ -179,7 +179,7 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
                 finalTimes.append(gtTimes)
                 baseTimesDone = True
 
-            finalTimes.append([st.getNames([c, v]), totalTimeNew]) # add to list
+            finalTimes.append([[c, v], totalTimeNew]) # add to list
 
             # reset variables
             totalTimeNew = 0

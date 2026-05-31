@@ -1,4 +1,5 @@
 import timingsCalc as tC
+import stats as st
 def exAsTxtFile(orgFile: str, filepath: str, times, gtTimes):
     # individual GT times
     totalTime = gtTimes[0] + gtTimes[1] + gtTimes[2] + gtTimes[3] + gtTimes[4] + gtTimes[5]
@@ -15,8 +16,11 @@ Total Time: {tC.milsToTime(totalTime)}
 '''
 
     for e in times:
+        # get names
+        n = st.getNames(e[0])
+
         # write line       [        timestamp         ]   [  char  ]  [  veh  ]
-        formattedText += f"\n{tC.milsToTime(e[1])} - {e[0][0]} / {e[0][1]}"
+        formattedText += f"\n{tC.milsToTime(e[1])} - {n[0]} / {n[1]}"
     
     with open(f"{filepath}.txt", "w", encoding="utf-8") as tmFile:
         tmFile.seek(0)
