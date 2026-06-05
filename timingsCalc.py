@@ -2,41 +2,6 @@ import re
 import stats as st
 import time
 
-baseValues = []
-baseIndex = [0, 0]
-
-# baseValues = st.getNamesAndStats([1, 10])
-totalTimeBase = 114655.0
-
-def readTextFile(filePath: str):
-    """
-    Gets timings from a text file, including the event.
-    """
-    global baseValues
-    global baseIndex
-    global totalTimeBase
-
-    timingsList = [] # list that gets returned
-    section = [] # singular section
-
-    # read timings file, get all sections
-    with open(filePath, "r", encoding="utf-8") as tmFile:
-        # get base combo values
-        tmFile.seek(0)
-        baseIndex = tmFile.readline().split()
-        baseValues = st.getStats(baseIndex)
-
-        # separate into sections
-        for l in tmFile:
-            # get section and add to timingsList
-            section = l.strip().split(" ")
-            section[0] = timeToMils(section[0])
-            timingsList.append(section)
-
-    totalTimeBase = timingsList[-1][0] # baseline run time
-
-    return timingsList
-
 def timeToMils(inputTime: str):
     """
     Converts a timestamp (M:ss.mmm) to milliseconds.
@@ -76,7 +41,7 @@ def milsToTime(inputTime: int):
 
     return timestamp
 
-def calcTimeDiff(baseTime: float, newCombo: int, groundType: str, coinCount: int):
+def calcTimeDiff(baseStats: int, baseTime: float, newStats: int, groundType: str, coinCount: int, boost = 0):
     """
     Calculates the time difference between 2 combos in one specific section.
 
@@ -92,13 +57,6 @@ def calcTimeDiff(baseTime: float, newCombo: int, groundType: str, coinCount: int
     coinCount: int
         Self explanatory.
     """
-    global baseValues
-    global baseIndex
-    global totalTimeBase
-    global totalTimeNew
-
-    # get stats for new combo
-    newStats = st.getStats(newCombo)
 
     gts = ["r", "t", "w", "n", "o", "x"]
     pos = gts.index(groundType)
@@ -106,11 +64,11 @@ def calcTimeDiff(baseTime: float, newCombo: int, groundType: str, coinCount: int
     newSpeed = 100.0
 
     if pos < 3: # road/terrain/water
-        newSpeed = (100 + (0.312 * newStats[0][pos])) * (1 + newStats[1][coinCount]/100)
-        baseSpeed = (100 + (0.312 * baseValues[0][pos])) * (1 + baseValues[1][coinCount]/100)
+        newSpeed = (100 + (0.312 * newStats[0][pos])) * (1 + newStats[1][coinCount]/100) * (1 + boost/100)
+        baseSpeed = (100 + (0.312 * baseStats[0][pos])) * (1 + baseStats[1][coinCount]/100) * (1 + boost/100)
     elif pos < 5: # neutral/offroad
-        newSpeed = 100 * (1 + newStats[1][coinCount]/100)
-        baseSpeed = 100 * (1 + baseValues[1][coinCount]/100)
+        newSpeed = 100 * (1 + newStats[1][coinCount]/100) * (1 + boost/100)
+        baseSpeed = 100 * (1 + baseStats[1][coinCount]/100) * (1 + boost/100)
     else: # none
         return baseTime
 
@@ -119,28 +77,19 @@ def calcTimeDiff(baseTime: float, newCombo: int, groundType: str, coinCount: int
 
     return newTime
 
-def calcLoop(timings, fixedChar = "", fixedVeh = ""):
+def calcLoop(timings, baseCombo: int, log = False):
     """
     Loops through all combos
     """
-    global baseValues
-    global baseIndex
-    global totalTimeBase
-
     finalTimes = []
 
-    sectionTimeBase = 0.0
-    sectionTimeNew = 0.0
-    totalTimeNew = 0.0
+    sectionTimeBase, sectionTimeNew, totalTimeNew, coins = 0.0, 0.0, 0.0, 0
     groundType = ""
-    coins = 0
-    i = 0
 
-    # cMin, cMax = 0, 6 # 20
-    # vMin, vMax = 6, 18 # 24
+    # get base stats
+    baseStats, newStats = st.getStats(baseCombo), []
 
-    limitC = []
-    limitV = []
+    limitC, limitV = [], []
 
     baseTimesDone = False
 
@@ -149,12 +98,14 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
 
     startTime = time.perf_counter()
     for c in limitC if limitC != [] else range(20): # loop characters
-
         for v in limitV if limitV != [] else range(24): # loop vehicles
+            newStats = st.getStats([c, v])
 
             for s in range(len(timings)-1): # loop through sections
                 if timings[s][1] != "e": # loop has not reached end
-                    sectionTimeBase = timings[s+1][0] - timings[s][0] # calculate base time in section
+
+                    # calculate base time in section
+                    sectionTimeBase = timings[s+1][0] - timings[s][0] 
                     if timings[s][1].lower() == "c" and coins < 20: # coin collection
                         coins += 1
                     else: # no coin collection: switch gt
@@ -172,7 +123,7 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
                                 gtTimes[5] += sectionTimeBase
                     
                     # calculate new section time + total time
-                    sectionTimeNew = calcTimeDiff(sectionTimeBase, [c, v], groundType.lower(), coins) 
+                    sectionTimeNew = calcTimeDiff(baseStats, sectionTimeBase, newStats, groundType.lower(), coins) 
                     totalTimeNew += sectionTimeNew
 
             if baseTimesDone == False:
@@ -184,10 +135,10 @@ def calcLoop(timings, fixedChar = "", fixedVeh = ""):
             # reset variables
             totalTimeNew = 0
             coins = 0
-            i+=1
             
             cN = st.getNames([c, v])
-            print(f"Calculated {i}/{(len(limitC) if limitC != [] else 20) * (len(limitV) if limitV != [] else 24)} ({cN[0]} / {cN[1]})")
+            if log:
+                print(f"Calculated {(c)*24 + (v+1)}/{(len(limitC) * len(limitV) if limitC != [] and limitV != [] else 480)} ({cN[0]} / {cN[1]})")
 
     endTime = time.perf_counter()
 
