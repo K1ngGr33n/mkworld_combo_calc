@@ -1,5 +1,6 @@
 import timingsCalc as tC
 import stats as st
+import re
 
 def readTextFile(filePath: str):
     """
@@ -15,11 +16,11 @@ def readTextFile(filePath: str):
         # get base combo values
         tmFile.seek(0)
         baseIndex = tmFile.readline().split()
-
+        
         # separate into sections
         for l in tmFile:
             # get section and add to timingsList
-            section = l.strip().split(" ")
+            section = re.split("\s", l.strip())
             section[0] = tC.timeToMils(section[0])
             timingsList.append(section)
 
