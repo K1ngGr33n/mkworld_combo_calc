@@ -73,7 +73,7 @@ def calcSectSpeed(timings, stats):
         if e[1].lower() == "c":
             coinCount += 1
         else:
-            pos = gts.index(e[1])
+            pos = gts.index(e[1].lower())
         if pos < 3: # road/terrain/water
             speed = (100 + (0.312 * stats[0][pos])) * (1 + stats[1][coinCount]/100) * (1 + boost/100)
         elif pos < 5: # neutral/offroad
@@ -112,7 +112,7 @@ def calcBaseSections(timings: int):
 
     return [sect, gtTimes]
 
-def calcLoop(timings, baseCombo: int, log = False):
+def calcLoop(timings, baseCombo: int, calcLog = False, speedLog = False):
     """
     Loops through all combos
     """
@@ -135,6 +135,8 @@ def calcLoop(timings, baseCombo: int, log = False):
     gtTimes = temp[1]
     baseSpeed = calcSectSpeed(baseSections, baseStats)
 
+    #speedList = [[[]]]
+
     # calculate every combo
     for c in limitC if limitC != [] else range(20): # loop characters
         for v in limitV if limitV != [] else range(24): # loop vehicles
@@ -148,14 +150,17 @@ def calcLoop(timings, baseCombo: int, log = False):
 
             finalTimes.append([[c, v], newTime]) # add to list
 
-            if log:
+            if calcLog:
                 x += 1
                 cN = st.getNames([c, v])
                 print(f"Calculated {x}/{(len(limitC) * len(limitV) if limitC != [] and limitV != [] else 480)} ({cN[0]} / {cN[1]})")
+            
+            #if speedLog:
+                #speedList[c][v].append(newSpeed)
 
     endTime = time.perf_counter()
 
     print(f"Calculation done ({endTime - startTime}s)")
-    return [finalTimes, gtTimes, endTime - startTime]
+    return [finalTimes, gtTimes, endTime - startTime]#, speedList]
 
 # print(milsToTime(65369.0 + 0 + 35843.0 + 27726.0 + 238.0 + 128.0))
