@@ -61,7 +61,7 @@ def milsToTime(inputTime: int):
 
 #     return
 
-def calcSectSpeed(timings, stats):
+def calcSectSpeed(timings, stats, boost = 0):
     gts = ["r", "t", "w", "n", "o", "x"]
     speedList = []
 
@@ -74,8 +74,10 @@ def calcSectSpeed(timings, stats):
             coinCount += 1
         else:
             pos = gts.index(e[1].lower())
-        if pos < 3: # road/terrain/water
+        if pos < 2: # road/terrain
             speed = (100 + (0.312 * stats[0][pos])) * (1 + stats[1][coinCount]/100) * (1 + boost/100)
+        elif pos == 2: # water
+            speed = (90 + (0.312 * stats[0][pos])) * (1 + stats[1][coinCount]/100) * (1 + boost/100)
         elif pos < 5: # neutral/offroad
             speed = 100 * (1 + stats[1][coinCount]/100) * (1 + boost/100)
         else: # none
