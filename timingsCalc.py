@@ -41,26 +41,6 @@ def milsToTime(inputTime: int):
 
     return timestamp
 
-# def calcTimeDiff(baseSpeed, timings, newStats: int):
-#     """
-#     Calculates the time difference between 2 combos in one specific section.
-
-#     Parameters:
-#     -----------
-#     baseTime: float
-#         The time from the baseline run.
-    
-#     newCombo: int
-#         The combo to compare against. [char index, veh index]
-    
-#     groundType: str
-#     coinCount: int
-#         Self explanatory.
-#     """
-    
-
-#     return
-
 def calcSectSpeed(timings, stats, boost = 0):
     gts = ["r", "t", "w", "n", "o", "x"]
     speedList = []
@@ -144,13 +124,13 @@ def calcLoop(timings, baseCombo: int, calcLog = False, speedLog = False):
         for v in limitV if limitV != [] else range(24): # loop vehicles
             newStats = st.getStats([c, v])
             newSpeed = calcSectSpeed(baseSections, newStats)
-            newTime = 0.0
+            newTimes = []
             
             # calculate new time
             for i in range(len(baseSections)):
-                newTime += (baseSpeed[i] * baseSections[i][0]) / newSpeed[i]
+                newTimes.append((baseSpeed[i] * baseSections[i][0]) / newSpeed[i])
 
-            finalTimes.append([[c, v], newTime]) # add to list
+            finalTimes.append([[c, v], newTimes]) # add to list
 
             if calcLog:
                 x += 1

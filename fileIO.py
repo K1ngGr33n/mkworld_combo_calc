@@ -1,6 +1,7 @@
 import timingsCalc as tC
 import stats as st
 import re
+import matplotlib as mpl
 
 def readTextFile(filePath: str):
     """
@@ -28,7 +29,7 @@ def readTextFile(filePath: str):
 
 def exAsTxtFile(orgFile: str, filepath: str, times, gtTimes, calcTime = ""):
     # individual GT times
-    totalTime = gtTimes[0] + gtTimes[1] + gtTimes[2] + gtTimes[3] + gtTimes[4] + gtTimes[5]
+    totalTime = sum(gtTimes)
     gts, prct = [], []
     for e in gtTimes:
         gts.append(tC.milsToTime(e))
@@ -46,12 +47,16 @@ Total Time: {tC.milsToTime(totalTime)} {f"(finished in {round(calcTime, 4)}s)" i
         n = st.getNames(e[0])
 
         # write line       [        timestamp         ]   [  char  ]  [  veh  ]
-        formattedText += f"\n{tC.milsToTime(e[1])} - {n[0]} / {n[1]}"
+        formattedText += f"\n{tC.milsToTime(sum(e[1]))} - {n[0]} / {n[1]}"
     
     with open(f"{filepath}.txt", "w", encoding="utf-8") as tmFile:
         tmFile.seek(0)
         tmFile.write(formattedText)
     print(f'Successfully wrote to "{filepath}.txt"')
+
+def exAsSpeedGraph(orgFile: str, filepath: str, times, combosToUse):
+    for e in combosToUse:
+        print()
 
 # def exAsCsvFile(filepath: str, times):
 #     """wip"""
