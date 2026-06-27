@@ -10,7 +10,7 @@ def sortTimings(input, mode = 0):
     output = []
 
     if mode == 0:
-        output = sorted(input, key=lambda x: x[1])
+        output = sorted(input, key=lambda x: sum(x[1]))
     else:
         for e in input:
             processList[e[0][mode-1]].append(e)
