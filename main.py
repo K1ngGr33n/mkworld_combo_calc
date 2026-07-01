@@ -1,16 +1,32 @@
 import fileIO as fIO
 import timingsCalc as tC
 import listSort as lS
+import os
+import os.path as op
+import re 
+import calcHandler as cH
 
 filePathTimings = "timings.txt"
 fileNameResults = "results"
-
-temp = fIO.readTextFile(filePathTimings)
-listOfTimings = temp[1]
+filePathDir = "usedTimings"
+filePathResults = "allResults"
 
 # calculate everything
-result = tC.calcLoop(listOfTimings, temp[0], False)
-trueResult = result[0][1:]
-resultSorted = lS.sortTimings(trueResult, 0) # 0: normal, 1: best vehicle, 2: best character
+calcMultiple = False
 
-fIO.exAsTxtFile(filePathTimings, fileNameResults, resultSorted, result[1], result[2])
+if calcMultiple:
+    txtFiles = cH.getTxtFiles(filePathDir)
+    for e in txtFiles:
+        temp = fIO.readTextFile(f"{filePathDir}\\{e}")
+        listOfTimings = temp[1]
+
+        try:
+            os.makedirs(filePathResults)
+        except FileExistsError: # directory already exists
+            pass
+
+        cH.runCalcs(listOfTimings, temp[0], e, f"{filePathResults}\\{fileNameResults}.{e}", 0, False, False)
+else:
+    temp = fIO.readTextFile(filePathTimings)
+    listOfTimings = temp[1]
+    cH.runCalcs(listOfTimings, temp[0], filePathTimings, fileNameResults, 0, False, False)
