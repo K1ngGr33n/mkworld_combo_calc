@@ -1,9 +1,5 @@
 import fileIO as fIO
-import timingsCalc as tC
-import listSort as lS
 import os
-import os.path as op
-import re 
 import calcHandler as cH
 
 filePathTimings = "timings.txt"
