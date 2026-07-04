@@ -42,7 +42,7 @@ def milsToTime(inputTime: int):
     return timestamp
 
 def calcSectSpeed(timings, stats, boost = 0):
-    gts = ["r", "t", "w", "n", "o", "x"]
+    gts = ["r", "t", "w", "n", "o", "g", "x"]
     speedList = []
 
     boost = 0
@@ -50,7 +50,7 @@ def calcSectSpeed(timings, stats, boost = 0):
 
     speed = 100.0
     for e in timings:
-        if e[1].lower() == "c":
+        if e[1].lower() == "c" and coinCount < 20:
             coinCount += 1
         else:
             pos = gts.index(e[1].lower())
@@ -60,6 +60,8 @@ def calcSectSpeed(timings, stats, boost = 0):
             speed = (90 + (0.312 * stats[0][pos])) * (1 + stats[1][coinCount]/100) * (1 + boost/100)
         elif pos < 5: # neutral/offroad
             speed = 100 * (1 + stats[1][coinCount]/100) * (1 + boost/100)
+        elif pos == 5: # gliders
+            speed = 100 * (1 + stats[1][coinCount]/100) * (1 + boost/100)
         else: # none
             speed = 100
 
@@ -68,8 +70,8 @@ def calcSectSpeed(timings, stats, boost = 0):
     return speedList
 
 def calcBaseSections(timings: int):
-    sect, gtTimes = [], [0, 0, 0, 0, 0, 0]
-    gts = ["r", "t", "w", "n", "o", "x"]
+    sect, gtTimes = [], [0, 0, 0, 0, 0, 0, 0]
+    gts = ["r", "t", "w", "n", "o", "g", "x"]
     coins = 0
 
     for i in range(len(timings)-1):
@@ -84,13 +86,12 @@ def calcBaseSections(timings: int):
         
         # calculate total time for each ground type
         pos = gts.index(groundType.lower())
-        if pos < 3 or pos == 5: # gt is r, t, w, or x
+        if pos < 3 or pos > 4: # gt is r, t, w, g or x
             gtTimes[pos] += diff
-        elif pos < 5: # gt is n or o
-            if coins != 0 and coins != 20:
-                gtTimes[pos] += diff
-            else: 
-                gtTimes[5] += diff
+        elif coins != 0 and coins != 20: # gt is n or o
+            gtTimes[pos] += diff
+        else: 
+            gtTimes[6] += diff
 
     return [sect, gtTimes]
 
@@ -105,7 +106,7 @@ def calcLoop(timings, baseCombo: int, calcLog = False, speedLog = False):
 
     limitC, limitV = [], []
 
-    gtTimes = [0, 0, 0, 0, 0, 0]
+    gtTimes = [0, 0, 0, 0, 0, 0, 0]
     x = 0
 
     # begin calculation
