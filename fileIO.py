@@ -27,7 +27,7 @@ def readTextFile(filePath: str):
 
     return [baseIndex, timingsList]
 
-def exAsTxtFile(orgFile: str, filepath: str, times, gtTimes, calcTime = ""):
+def exAsTxtFile(orgFile: str, filepath: str, times, gtTimes, calcTime):
     # individual GT times
     totalTime = sum(gtTimes)
     gts, prct = [], []

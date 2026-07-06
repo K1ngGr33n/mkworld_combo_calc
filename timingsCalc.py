@@ -95,7 +95,7 @@ def calcBaseSections(timings: int):
 
     return [sect, gtTimes]
 
-def calcLoop(timings, baseCombo: int, calcLog = False, speedLog = False):
+def calcLoop(timings, baseCombo: int, calcLog = False, timeLog = False):
     """
     Loops through all combos
     """
@@ -110,7 +110,8 @@ def calcLoop(timings, baseCombo: int, calcLog = False, speedLog = False):
     x = 0
 
     # begin calculation
-    startTime = time.perf_counter()
+    if timeLog:
+        startTime = time.perf_counter()
 
     # get base combo values
     temp = calcBaseSections(timings)
@@ -118,7 +119,7 @@ def calcLoop(timings, baseCombo: int, calcLog = False, speedLog = False):
     gtTimes = temp[1]
     baseSpeed = calcSectSpeed(baseSections, baseStats)
 
-    #speedList = [[[]]]
+    # speedList = [[[]]]
 
     # calculate every combo
     for c in limitC if limitC != [] else range(20): # loop characters
@@ -141,9 +142,10 @@ def calcLoop(timings, baseCombo: int, calcLog = False, speedLog = False):
             #if speedLog:
                 #speedList[c][v].append(newSpeed)
 
-    endTime = time.perf_counter()
+    if timeLog:
+        endTime = time.perf_counter()
 
-    print(f"Calculation done ({endTime - startTime}s)")
-    return [finalTimes, gtTimes, endTime - startTime]#, speedList]
+    print(f"Calculation done{f" ({endTime - startTime}s)" if timeLog else ""}")
+    return [finalTimes, gtTimes, endTime - startTime if timeLog else ""]#, speedList]
 
 # print(milsToTime(65369.0 + 0 + 35843.0 + 27726.0 + 238.0 + 128.0))
