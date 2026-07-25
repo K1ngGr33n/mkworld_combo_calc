@@ -44,14 +44,19 @@ def milsToTime(inputTime: int):
 def calcSectSpeed(timings, stats, boost = 0):
     gts = ["r", "t", "w", "n", "o", "g", "x"]
     speedList = []
+    pos = 0
 
     boost = 0
     coinCount = 0
 
     speed = 100.0
     for e in timings:
-        if e[1].lower() == "c" and coinCount < 20:
+        if e[1].lower() == "c" and coinCount < 20: # coins
             coinCount += 1
+        elif e[1].lower() == "h" or e[1].lower() == "sh": 
+            coinCount -= 3 if e[1].lower() == "h" else 2 # hit 
+            if coinCount < 0:
+                coinCount = 0
         else:
             pos = gts.index(e[1].lower())
         if pos < 2: # road/terrain
@@ -61,7 +66,8 @@ def calcSectSpeed(timings, stats, boost = 0):
         elif pos < 5: # neutral/offroad
             speed = 100 * (1 + stats[1][coinCount]/100) * (1 + boost/100)
         elif pos == 5: # gliders
-            speed = 100 * (1 + stats[1][coinCount]/100) * (1 + boost/100)
+            # speed = 100 * (1 + stats[1][coinCount]/100) * (1 + boost/100)
+            speed = (100 + (0.49 * stats[0][3])) * (1 + stats[1][coinCount]/100) * (1 + boost/100)
         else: # none
             speed = 100
 
@@ -73,11 +79,16 @@ def calcBaseSections(timings: int):
     sect, gtTimes = [], [0, 0, 0, 0, 0, 0, 0]
     gts = ["r", "t", "w", "n", "o", "g", "x"]
     coins = 0
+    groundType = "r"
 
     for i in range(len(timings)-1):
         # calculate time differences
         if timings[i][1].lower() == "c":
             coins += 1
+        elif timings[i][1].lower() == "h" or timings[i][1].lower() == "sh":
+            coins -= 3 if timings[i][1].lower() == "h" else 2
+            if coins < 0:
+                coins = 0
         else:
             groundType = timings[i][1]
         
