@@ -24,7 +24,7 @@ The first line contains the combo used in the run. You must encode it using 2 nu
 
 ```4 11```
 (example: Toadette / Baby Blooper.)
-~~You can find all the numbers here: [INDEXLIST.md](INDEXLIST.md)~~ TODO: ADD THIS
+~~You can find all the numbers here: [INDEXLIST.md](INDEXLIST.md)~~ TODO: ADD THIS, FOR NOW GO INTO THE CHARACTER/VEHILCLE STATS CSV AND FIND THE NUMBER RIGHT NEXT TO YOUR CHARACTER/VEHICLE
 
 #### Events
 
