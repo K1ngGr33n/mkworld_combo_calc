@@ -40,7 +40,8 @@ r - Road (Concrete, Wood, Asphalt...)
 t - Terrain (Mud, Sand, Dirt... (NOT offroad))
 w - Water (Places where your kart becomes a jetski, and sometimes shallow water)
 
-n - Neutral (Rails, Walls and Gliders)
+n - Neutral (Rails and Walls)
+g - Gliders
 o - Offroad
 
 x - None (Cannon Gliders)
