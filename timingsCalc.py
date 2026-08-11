@@ -51,8 +51,9 @@ def calcSectSpeed(timings, stats, boost = 0):
 
     speed = 100.0
     for e in timings:
-        if e[1].lower() == "c" and coinCount < 20: # coins
-            coinCount += 1
+        if e[1].lower() == "c":
+            if coinCount < 20: # coins
+                coinCount += 1
         elif e[1].lower() == "h" or e[1].lower() == "sh": 
             coinCount -= 3 if e[1].lower() == "h" else 2 # hit 
             if coinCount < 0:

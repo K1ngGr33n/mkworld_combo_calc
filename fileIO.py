@@ -21,9 +21,10 @@ def readTextFile(filePath: str):
         # separate into sections
         for l in tmFile:
             # get section and add to timingsList
-            section = re.split(r"\s+", l.strip())
-            section[0] = tC.timeToMils(section[0])
-            timingsList.append(section)
+            if l.strip()[0] != "#": # skip line if comment
+                section = re.split(r"\s+", l.strip())
+                section[0] = tC.timeToMils(section[0])
+                timingsList.append(section)
 
     return [baseIndex, timingsList]
 
