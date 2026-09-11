@@ -43,8 +43,10 @@ w - Water (Places where your kart becomes a jetski, and sometimes shallow water)
 n - Neutral (Rails and Walls)
 g - Gliders
 o - Offroad
-
 x - None (Cannon Gliders)
+
+h - item hit (-3 coins)
+sh - shock hit (-2 coins)
 e - End of the run
 ```
 
