@@ -7,9 +7,13 @@ fileNameResults = "results"
 filePathDir = "usedTimings" # MULTIPLE
 filePathResults = "allResults"
 
-# calculate everything
+# calculate everything, keep 
 calcMultiple = False
 logTime = True
+
+# limits, keep empty to include all
+limitC = []
+limitV = []
 
 if calcMultiple:
     txtFiles = cH.getTxtFiles(filePathDir)
@@ -22,8 +26,8 @@ if calcMultiple:
         except FileExistsError: # directory already exists
             pass
 
-        cH.runCalcs(listOfTimings, temp[0], e, f"{filePathResults}\\{fileNameResults}.{e}", 0, False, logTime)
+        cH.runCalcs(listOfTimings, temp[0], [limitC, limitV], e, f"{filePathResults}\\{fileNameResults}.{e}", 0, False, logTime)
 else:
     temp = fIO.readTextFile(filePathTimings)
     listOfTimings = temp[1]
-    cH.runCalcs(listOfTimings, temp[0], filePathTimings, fileNameResults, 0, False, logTime)
+    cH.runCalcs(listOfTimings, temp[0], [limitC, limitV], filePathTimings, fileNameResults, 0, False, logTime)

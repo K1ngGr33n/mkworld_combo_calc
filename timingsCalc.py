@@ -107,7 +107,7 @@ def calcBaseSections(timings: int):
 
     return [sect, gtTimes]
 
-def calcLoop(timings, baseCombo: int, calcLog = False, timeLog = False):
+def calcLoop(timings, baseCombo: int, limits, calcLog = False, timeLog = False):
     """
     Loops through all combos
     """
@@ -115,8 +115,6 @@ def calcLoop(timings, baseCombo: int, calcLog = False, timeLog = False):
 
     # get base stats
     baseStats, newStats = st.getStats(baseCombo), []
-
-    limitC, limitV = [], []
 
     gtTimes = [0, 0, 0, 0, 0, 0, 0]
     x = 0
@@ -134,8 +132,8 @@ def calcLoop(timings, baseCombo: int, calcLog = False, timeLog = False):
     # speedList = [[[]]]
 
     # calculate every combo
-    for c in limitC if limitC != [] else range(20): # loop characters
-        for v in limitV if limitV != [] else range(24): # loop vehicles
+    for c in limits[0] if limits[0] != [] else range(20): # loop characters
+        for v in limits[1] if limits[1] != [] else range(24): # loop vehicles
             newStats = st.getStats([c, v])
             newSpeed = calcSectSpeed(baseSections, newStats)
             newTimes = []
@@ -149,7 +147,7 @@ def calcLoop(timings, baseCombo: int, calcLog = False, timeLog = False):
             if calcLog:
                 x += 1
                 cN = st.getNames([c, v])
-                print(f"Calculated {x}/{(len(limitC) * len(limitV) if limitC != [] and limitV != [] else 480)} ({cN[0]} / {cN[1]})")
+                print(f"Calculated {x}/{(len(limits[0]) * len(limits[1]) if limits[0] != [] and limits[1] != [] else 480)} ({cN[0]} / {cN[1]})")
             
             #if speedLog:
                 #speedList[c][v].append(newSpeed)
