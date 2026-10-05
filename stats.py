@@ -59,4 +59,4 @@ def getStats(index: int):
 
     return returnVal
 
-# print(getStats(testInputCombo))
+print(f"{getStats(testInputCombo)}\n{getNames(testInputCombo)}")
