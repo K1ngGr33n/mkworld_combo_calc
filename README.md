@@ -50,8 +50,10 @@ sh - shock hit (-2 coins)
 e - End of the run
 ```
 
+You can place ```#``` at the start of a line to ignore it. This can be used for comments.
+
 #### Ending
-You must encode the **final time** of the run at the very end. Use the **letter "e"** here: ```1:54.655 e```
+You must encode the **final time** of the run at the very end. Use the **letter "e"**: ```1:54.655 e```
 
 <br>
 
@@ -61,20 +63,15 @@ After you have done all of these steps, your file should look like this:
 0:00.000 r
 0:02.740 c
 0:03.083 r
+# comment 1
 0:04.483 w
 0:07.483 o
-0:08.416 r
+0:08.416 r # comment 2
 ...
 1:54.665 e
 ```
 
 ### Step 3: Run the Script
-Note: you must have the libraries **numpy** and **pandas** installed. If you do not, you need to install them:
-```
-pip install numpy
-pip install pandas
-```
-
-Make sure your text file is in the **same directory** as the ```main.py``` file. If that is the case, **simply run** ```main.py```, and wait a few seconds.
+Make sure your text file is in the **same directory** as the ```main.py``` file. If that is the case, **simply run** ```main.py```.
 
 The result of the calculation will be a file called ```"results.txt"```, located in the same directory.
