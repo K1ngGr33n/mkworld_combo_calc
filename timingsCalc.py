@@ -71,7 +71,6 @@ def calcSectSpeed(timings, stats, boost = 0):
             speed = (100 + (0.49 * stats[0][3])) * (1 + stats[1][coinCount]/100) * (1 + boost/100)
         else: # none
             speed = 100
-
         speedList.append(speed)
 
     return speedList

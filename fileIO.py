@@ -25,6 +25,8 @@ def readTextFile(filePath: str):
                 section = re.split(r"\s+", l.strip())
                 section[0] = tC.timeToMils(section[0])
                 timingsList.append(section)
+                if section[1] == "e": # exit if run end ("e") is found
+                    break
 
     return [baseIndex, timingsList]
 
