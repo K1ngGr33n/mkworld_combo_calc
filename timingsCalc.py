@@ -119,8 +119,6 @@ def calcLoop(timings, baseCombo: int, limits, calcLog = False, timeLog = False):
     x = 0
 
     # begin calculation
-    if timeLog:
-        startTime = time.perf_counter()
 
     # get base combo values
     temp = calcBaseSections(timings)
@@ -151,10 +149,6 @@ def calcLoop(timings, baseCombo: int, limits, calcLog = False, timeLog = False):
             #if speedLog:
                 #speedList[c][v].append(newSpeed)
 
-    if timeLog:
-        endTime = time.perf_counter()
-
-    print(f"Calculation done{f" ({endTime - startTime}s)" if timeLog else ""}")
-    return [finalTimes, gtTimes, endTime - startTime if timeLog else ""]#, speedList]
+    return [finalTimes, gtTimes]#, speedList]
 
 # print(milsToTime(65369.0 + 0 + 35843.0 + 27726.0 + 238.0 + 128.0))

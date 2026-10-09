@@ -1,6 +1,7 @@
 import fileIO as fIO
 import os
 import calcHandler as cH
+import time
 
 filePathTimings = "timings.txt" # SINGLE
 fileNameResults = "results"
@@ -14,6 +15,9 @@ logTime = True
 # limits, keep empty to include all
 limitC = []
 limitV = []
+
+# begin calculation
+startTimeFull = time.perf_counter()
 
 if calcMultiple:
     txtFiles = cH.getTxtFiles(filePathDir)
@@ -31,3 +35,6 @@ else:
     temp = fIO.readTextFile(filePathTimings)
     listOfTimings = temp[1]
     cH.runCalcs(listOfTimings, temp[0], [limitC, limitV], filePathTimings, fileNameResults, 0, False, logTime)
+
+endTimeFull = time.perf_counter()
+print(f"Process completed in {endTimeFull-startTimeFull}s")

@@ -1,7 +1,7 @@
 import timingsCalc as tC
 import stats as st
 import re
-import matplotlib as mpl
+# import matplotlib as mpl
 
 def readTextFile(filePath: str):
     """
@@ -56,11 +56,12 @@ Total Time: {tC.milsToTime(totalTime)} {f"(finished in {round(calcTime, 4)}s)" i
     with open(f"{filepath}.txt", "w", encoding="utf-8") as tmFile:
         tmFile.seek(0)
         tmFile.write(formattedText)
-    print(f'Successfully wrote to "{filepath}.txt"')
+    print(f'Results written to "{filepath}.txt"')
 
-def exAsSpeedGraph(orgFile: str, filepath: str, times, combosToUse):
-    for e in combosToUse:
-        print()
+# def exAsSpeedGraph(orgFile: str, filepath: str, times, combosToUse):
+#     """wip maybe"""
+#     for e in combosToUse:
+#         print()
 
 # def exAsCsvFile(filepath: str, times):
 #     """wip"""
