@@ -1,7 +1,4 @@
 __pycache__/
-allResults_copy/
-mainTest.py
+testing/
 timings.txt
 results.txt
-STEPS.md
-test.py
