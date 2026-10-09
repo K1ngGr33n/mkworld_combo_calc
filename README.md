@@ -5,6 +5,7 @@ Note: This program **cannot calculate** time differences from **Acceleration, Ha
 
 You can find my own test results in [this document.](https://docs.google.com/document/d/1vZDuUWTfXXjkFKGuCVNkZw4yabM3KSRRKyNxEDxHIqA/edit?tab=t.wq6qf5cgyyrz)
 
+_This program works for these MKWorld versions: **1.7.0; 1.8.0**_
 _Inspired by a similar project from [cypress](https://github.com/cypress-city)_
 
 <hr>
@@ -34,7 +35,7 @@ Every time the **ground type changes** or the run **collects a coin**, you need 
 Every line must be structured like this: ```0:00.000 a```
 
 The first part is the **timestamp of the event.** You can simply use the in-game timer.
-The second part is a **letter** that stands for the event, which you can look up in this list:
+The second part is a **tag** that stands for the event, which you can look up in this list:
 ```
 r - Road (Concrete, Wood, Asphalt...)
 t - Terrain (Mud, Sand, Dirt... (NOT offroad))
@@ -47,17 +48,32 @@ x - None (Cannon Gliders)
 
 h - item hit (-3 coins)
 sh - shock hit (-2 coins)
+
 e - End of the run
 ```
 
-You can place ```#``` at the start of a line to ignore it. This can be used for comments.
+You can use ```#``` at the start of a line to skip that line. This can be used for comments: 
+```
+1:12.546 r
+# lap 3     <-- this line will be ignored 
+1:14.567 t
+```
 
 #### Ending
-You must encode the **final time** of the run at the very end. Use the **letter "e"**: ```1:54.655 e```
+You must encode the **final time** of the run. **Use the tag "e"**: ```1:54.655 e```
 
-<br>
+Placing this in the middle of your file will ignore all lines below: 
+```
+1:50.130 r
+2:01.009 e  <-- end
+2:02.426 t  |
+2:04.235 r  |   <-- program will skip these lines 
+2:05.635 e  |
+```
 
-After you have done all of these steps, your file should look like this:
+
+#### Final Result
+After you are done, your file should look like this:
 ```
 4 11
 0:00.000 r
@@ -67,11 +83,13 @@ After you have done all of these steps, your file should look like this:
 0:04.483 w
 0:07.483 o
 0:08.416 r # comment 2
+
 ...
+
 1:54.665 e
 ```
 
 ### Step 3: Run the Script
-Make sure your text file is in the **same directory** as the ```main.py``` file. If that is the case, **simply run** ```main.py```.
+Make sure your text file is in the **same directory** as the ```main.py``` file. Then **simply run** ```main.py```.
 
 The result of the calculation will be a file called ```"results.txt"```, located in the same directory.
