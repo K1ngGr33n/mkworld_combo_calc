@@ -70,14 +70,14 @@ def calcSectSpeed(timings, stats, boost = 0):
         else:
             pos = gts.index(e[1].lower())
         if pos < 2: # road/terrain
-            speed = (100 + (0.312 * stats[0][pos])) * (1 + stats[1][coinCount]/100) * (1 + boost/100)
+            speed = (100 + (0.312 * stats[0][pos])) * (1 + 0.25*coinCount/100) * (1 + boost/100)
         elif pos == 2: # water
-            speed = (90 + (0.312 * stats[0][pos])) * (1 + stats[1][coinCount]/100) * (1 + boost/100)
+            speed = (90 + (0.312 * stats[0][pos])) * (1 + 0.25*coinCount/100) * (1 + boost/100)
         elif pos < 5: # neutral/offroad
-            speed = 100 * (1 + stats[1][coinCount]/100) * (1 + boost/100)
+            speed = 100 * (1 + 0.25*coinCount/100) * (1 + boost/100)
         elif pos == 5: # gliders
-            # speed = 100 * (1 + stats[1][coinCount]/100) * (1 + boost/100)
-            speed = (100 + (0.49 * stats[0][3])) * (1 + stats[1][coinCount]/100) * (1 + boost/100)
+            # speed = 100 * (1 + 0.25*coinCount/100) * (1 + boost/100)
+            speed = (100 + (0.49 * stats[0][3])) * (1 + 0.25*coinCount/100) * (1 + boost/100)
         else: # none
             speed = 100
         speedList.append(speed)

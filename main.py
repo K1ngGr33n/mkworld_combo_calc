@@ -4,7 +4,7 @@ import os, time
 
 filePathTimings = "timings.txt" # SINGLE
 fileNameResults = "results"
-filePathDir = "usedTimings/snes" # MULTIPLE
+filePathDir = "usedTimings/normal" # MULTIPLE
 filePathResults = "allResults"
 
 # settings for now
