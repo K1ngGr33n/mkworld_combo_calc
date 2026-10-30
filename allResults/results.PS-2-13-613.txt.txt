@@ -1,0 +1,485 @@
+Read from file "PS-2-13-613.txt"
+Road: 1:28.248 (66.05%) | Terrain: 0:00.000 (0.0%) | Water: 0:00.000 (0.0%)
+Neutral: 0:37.875 (28.35%) | Offroad: 0:03.611 (2.7%) | Gliders: 0:00.000 (0.0%)
+None: 0:03.879 (0.0%)
+Total Time: 2:13.613 
+
+2:13.613 - Wario / Big Horn
+2:13.696 - Wario / Reel Racer
+2:13.696 - Wario / B-Dasher
+2:13.697 - Wario / Rallygator
+2:13.697 - Bowser / Big Horn
+2:13.769 - Wario / Baby Blooper
+2:13.781 - Pauline / Big Horn
+2:13.781 - Wario / Junkyard Hog
+2:13.781 - Bowser / Reel Racer
+2:13.781 - Bowser / B-Dasher
+2:13.794 - Bowser / Rallygator
+2:13.865 - Mario / Big Horn
+2:13.865 - Pauline / Reel Racer
+2:13.865 - Pauline / B-Dasher
+2:13.865 - Wario / W-Twin Chopper
+2:13.865 - Bowser / Baby Blooper
+2:13.877 - Pauline / Rallygator
+2:13.877 - Chargin' Chuck / Big Horn
+2:13.877 - Waluigi / Big Horn
+2:13.877 - Bowser / Junkyard Hog
+2:13.951 - Mario / Reel Racer
+2:13.951 - Mario / B-Dasher
+2:13.951 - Pauline / Baby Blooper
+2:13.951 - Wario / R.O.B. H.O.G.
+2:13.961 - Chargin' Chuck / Rallygator
+2:13.961 - Waluigi / Rallygator
+2:13.961 - Mario / Rallygator
+2:13.961 - Pauline / Junkyard Hog
+2:13.961 - Chargin' Chuck / Reel Racer
+2:13.961 - Chargin' Chuck / B-Dasher
+2:13.961 - Waluigi / Reel Racer
+2:13.961 - Waluigi / B-Dasher
+2:13.961 - Bowser / W-Twin Chopper
+2:14.036 - Daisy / Big Horn
+2:14.036 - Mario / Junkyard Hog
+2:14.036 - Pauline / W-Twin Chopper
+2:14.036 - Chargin' Chuck / Baby Blooper
+2:14.036 - Waluigi / Baby Blooper
+2:14.036 - Bowser / R.O.B. H.O.G.
+2:14.039 - Mario / Baby Blooper
+2:14.046 - King Boo / Big Horn
+2:14.046 - Rosalina / Big Horn
+2:14.046 - Chargin' Chuck / Junkyard Hog
+2:14.046 - Waluigi / Junkyard Hog
+2:14.123 - Toadette / Big Horn
+2:14.123 - Daisy / Reel Racer
+2:14.123 - Daisy / B-Dasher
+2:14.123 - Mario / W-Twin Chopper
+2:14.123 - Pauline / R.O.B. H.O.G.
+2:14.132 - Daisy / Rallygator
+2:14.132 - Luigi / Big Horn
+2:14.132 - Penguin / Big Horn
+2:14.132 - King Boo / Reel Racer
+2:14.132 - King Boo / B-Dasher
+2:14.132 - Rosalina / Reel Racer
+2:14.132 - Rosalina / B-Dasher
+2:14.132 - Chargin' Chuck / W-Twin Chopper
+2:14.132 - Waluigi / W-Twin Chopper
+2:14.142 - King Boo / Rallygator
+2:14.142 - Rosalina / Rallygator
+2:14.142 - Wario / Chargin' Truck
+2:14.142 - Wario / Mecha Trike
+2:14.212 - Toadette / Reel Racer
+2:14.212 - Toadette / B-Dasher
+2:14.212 - Daisy / Baby Blooper
+2:14.212 - Mario / R.O.B. H.O.G.
+2:14.219 - Toadette / Rallygator
+2:14.219 - Daisy / Junkyard Hog
+2:14.219 - Luigi / Reel Racer
+2:14.219 - Luigi / B-Dasher
+2:14.219 - Penguin / Reel Racer
+2:14.219 - Penguin / B-Dasher
+2:14.219 - King Boo / Baby Blooper
+2:14.219 - Rosalina / Baby Blooper
+2:14.219 - Chargin' Chuck / R.O.B. H.O.G.
+2:14.219 - Waluigi / R.O.B. H.O.G.
+2:14.227 - Wario / Lobster Roller
+2:14.227 - Bowser / Chargin' Truck
+2:14.227 - Bowser / Mecha Trike
+2:14.228 - Luigi / Rallygator
+2:14.228 - Penguin / Rallygator
+2:14.228 - King Boo / Junkyard Hog
+2:14.228 - Rosalina / Junkyard Hog
+2:14.302 - Toadette / Baby Blooper
+2:14.303 - Yoshi / Big Horn
+2:14.303 - Bowser Jr. / Big Horn
+2:14.303 - Luigi / Junkyard Hog
+2:14.303 - Penguin / Junkyard Hog
+2:14.303 - King Boo / W-Twin Chopper
+2:14.303 - Rosalina / W-Twin Chopper
+2:14.308 - Baby Mario / Big Horn
+2:14.308 - Toadette / Junkyard Hog
+2:14.308 - Daisy / W-Twin Chopper
+2:14.308 - Luigi / Baby Blooper
+2:14.308 - Penguin / Baby Blooper
+2:14.313 - Pauline / Chargin' Truck
+2:14.313 - Pauline / Mecha Trike
+2:14.323 - Bowser / Lobster Roller
+2:14.392 - Baby Mario / Rallygator
+2:14.392 - Toad / Big Horn
+2:14.392 - Koopa Troopa / Big Horn
+2:14.392 - Yoshi / Reel Racer
+2:14.392 - Yoshi / B-Dasher
+2:14.392 - Bowser Jr. / Reel Racer
+2:14.392 - Bowser Jr. / B-Dasher
+2:14.392 - Luigi / W-Twin Chopper
+2:14.392 - Penguin / W-Twin Chopper
+2:14.392 - King Boo / R.O.B. H.O.G.
+2:14.392 - Rosalina / R.O.B. H.O.G.
+2:14.398 - Baby Mario / Reel Racer
+2:14.398 - Baby Mario / B-Dasher
+2:14.398 - Toadette / W-Twin Chopper
+2:14.398 - Daisy / R.O.B. H.O.G.
+2:14.400 - Yoshi / Rallygator
+2:14.400 - Bowser Jr. / Rallygator
+2:14.400 - Mario / Chargin' Truck
+2:14.400 - Mario / Mecha Trike
+2:14.400 - Wario / Standard Kart
+2:14.409 - Pauline / Lobster Roller
+2:14.409 - Wario / Stellar Sled
+2:14.409 - Chargin' Chuck / Chargin' Truck
+2:14.409 - Chargin' Chuck / Mecha Trike
+2:14.409 - Waluigi / Chargin' Truck
+2:14.409 - Waluigi / Mecha Trike
+2:14.482 - Baby Peach / Big Horn
+2:14.482 - Baby Mario / Junkyard Hog
+2:14.482 - Toad / Reel Racer
+2:14.482 - Toad / B-Dasher
+2:14.482 - Koopa Troopa / Reel Racer
+2:14.482 - Koopa Troopa / B-Dasher
+2:14.482 - Yoshi / Baby Blooper
+2:14.482 - Bowser Jr. / Baby Blooper
+2:14.482 - Luigi / R.O.B. H.O.G.
+2:14.482 - Penguin / R.O.B. H.O.G.
+2:14.488 - Toad / Rallygator
+2:14.488 - Koopa Troopa / Rallygator
+2:14.488 - Yoshi / Junkyard Hog
+2:14.488 - Bowser Jr. / Junkyard Hog
+2:14.490 - Baby Mario / Baby Blooper
+2:14.490 - Toadette / R.O.B. H.O.G.
+2:14.494 - Chargin' Chuck / Lobster Roller
+2:14.494 - Waluigi / Lobster Roller
+2:14.494 - Bowser / Stellar Sled
+2:14.496 - Mario / Lobster Roller
+2:14.496 - Wario / Blastronaut III
+2:14.496 - Bowser / Standard Kart
+2:14.573 - Daisy / Chargin' Truck
+2:14.573 - Daisy / Mecha Trike
+2:14.573 - Pauline / Standard Kart
+2:14.573 - Wario / Loco Moto
+2:14.574 - Baby Peach / Reel Racer
+2:14.574 - Baby Peach / B-Dasher
+2:14.574 - Baby Mario / W-Twin Chopper
+2:14.574 - Toad / Baby Blooper
+2:14.574 - Koopa Troopa / Baby Blooper
+2:14.579 - Baby Peach / Rallygator
+2:14.579 - Baby Luigi / Big Horn
+2:14.579 - Baby Rosalina / Big Horn
+2:14.579 - Toad / Junkyard Hog
+2:14.579 - Koopa Troopa / Junkyard Hog
+2:14.579 - Yoshi / W-Twin Chopper
+2:14.579 - Bowser Jr. / W-Twin Chopper
+2:14.581 - Pauline / Stellar Sled
+2:14.581 - King Boo / Chargin' Truck
+2:14.581 - King Boo / Mecha Trike
+2:14.581 - Rosalina / Chargin' Truck
+2:14.581 - Rosalina / Mecha Trike
+2:14.581 - Bowser / Blastronaut III
+2:14.663 - Baby Luigi / Rallygator
+2:14.663 - Baby Rosalina / Rallygator
+2:14.663 - Toadette / Chargin' Truck
+2:14.663 - Toadette / Mecha Trike
+2:14.663 - Mario / Standard Kart
+2:14.667 - Baby Peach / Baby Blooper
+2:14.667 - Baby Mario / R.O.B. H.O.G.
+2:14.669 - Daisy / Lobster Roller
+2:14.669 - Mario / Stellar Sled
+2:14.669 - Luigi / Chargin' Truck
+2:14.669 - Luigi / Mecha Trike
+2:14.669 - Penguin / Chargin' Truck
+2:14.669 - Penguin / Mecha Trike
+2:14.669 - Pauline / Blastronaut III
+2:14.669 - Chargin' Chuck / Standard Kart
+2:14.669 - Waluigi / Standard Kart
+2:14.669 - Bowser / Loco Moto
+2:14.670 - Baby Peach / Junkyard Hog
+2:14.670 - Baby Luigi / Reel Racer
+2:14.670 - Baby Luigi / B-Dasher
+2:14.670 - Baby Rosalina / Reel Racer
+2:14.670 - Baby Rosalina / B-Dasher
+2:14.670 - Toad / W-Twin Chopper
+2:14.670 - Koopa Troopa / W-Twin Chopper
+2:14.670 - Yoshi / R.O.B. H.O.G.
+2:14.670 - Bowser Jr. / R.O.B. H.O.G.
+2:14.678 - King Boo / Lobster Roller
+2:14.678 - Rosalina / Lobster Roller
+2:14.678 - Chargin' Chuck / Stellar Sled
+2:14.678 - Waluigi / Stellar Sled
+2:14.754 - Baby Luigi / Junkyard Hog
+2:14.754 - Baby Rosalina / Junkyard Hog
+2:14.759 - Toadette / Lobster Roller
+2:14.759 - Mario / Blastronaut III
+2:14.759 - Pauline / Loco Moto
+2:14.763 - Baby Peach / W-Twin Chopper
+2:14.763 - Baby Luigi / Baby Blooper
+2:14.763 - Baby Rosalina / Baby Blooper
+2:14.763 - Toad / R.O.B. H.O.G.
+2:14.763 - Koopa Troopa / R.O.B. H.O.G.
+2:14.766 - Luigi / Lobster Roller
+2:14.766 - Penguin / Lobster Roller
+2:14.766 - Wario / Rally Kart
+2:14.766 - Wario / Cloud 9
+2:14.766 - Chargin' Chuck / Blastronaut III
+2:14.766 - Waluigi / Blastronaut III
+2:14.844 - Daisy / Stellar Sled
+2:14.844 - Yoshi / Chargin' Truck
+2:14.844 - Yoshi / Mecha Trike
+2:14.844 - Bowser Jr. / Chargin' Truck
+2:14.844 - Bowser Jr. / Mecha Trike
+2:14.844 - King Boo / Standard Kart
+2:14.844 - Rosalina / Standard Kart
+2:14.844 - Chargin' Chuck / Loco Moto
+2:14.844 - Waluigi / Loco Moto
+2:14.847 - Baby Luigi / W-Twin Chopper
+2:14.847 - Baby Rosalina / W-Twin Chopper
+2:14.851 - Baby Mario / Chargin' Truck
+2:14.851 - Baby Mario / Mecha Trike
+2:14.851 - Daisy / Standard Kart
+2:14.851 - Mario / Loco Moto
+2:14.851 - King Boo / Stellar Sled
+2:14.851 - Rosalina / Stellar Sled
+2:14.851 - Wario / Funky Dorrie
+2:14.851 - Bowser / Rally Kart
+2:14.851 - Bowser / Cloud 9
+2:14.858 - Baby Peach / R.O.B. H.O.G.
+2:14.935 - Baby Mario / Lobster Roller
+2:14.935 - Toadette / Stellar Sled
+2:14.935 - Toad / Chargin' Truck
+2:14.935 - Toad / Mecha Trike
+2:14.935 - Koopa Troopa / Chargin' Truck
+2:14.935 - Koopa Troopa / Mecha Trike
+2:14.935 - Daisy / Blastronaut III
+2:14.935 - Luigi / Standard Kart
+2:14.935 - Penguin / Standard Kart
+2:14.941 - Yoshi / Lobster Roller
+2:14.941 - Bowser Jr. / Lobster Roller
+2:14.941 - Luigi / Stellar Sled
+2:14.941 - Penguin / Stellar Sled
+2:14.941 - Pauline / Rally Kart
+2:14.941 - Pauline / Cloud 9
+2:14.941 - King Boo / Blastronaut III
+2:14.941 - Rosalina / Blastronaut III
+2:14.942 - Baby Luigi / R.O.B. H.O.G.
+2:14.942 - Baby Rosalina / R.O.B. H.O.G.
+2:14.944 - Toadette / Standard Kart
+2:14.948 - Bowser / Funky Dorrie
+2:15.028 - Baby Peach / Chargin' Truck
+2:15.028 - Baby Peach / Mecha Trike
+2:15.028 - Toadette / Blastronaut III
+2:15.028 - Daisy / Loco Moto
+2:15.032 - Toad / Lobster Roller
+2:15.032 - Koopa Troopa / Lobster Roller
+2:15.032 - Mario / Rally Kart
+2:15.032 - Mario / Cloud 9
+2:15.032 - Luigi / Blastronaut III
+2:15.032 - Penguin / Blastronaut III
+2:15.032 - King Boo / Loco Moto
+2:15.032 - Rosalina / Loco Moto
+2:15.038 - Pauline / Funky Dorrie
+2:15.038 - Wario / Dread Sled
+2:15.038 - Chargin' Chuck / Rally Kart
+2:15.038 - Chargin' Chuck / Cloud 9
+2:15.038 - Waluigi / Rally Kart
+2:15.038 - Waluigi / Cloud 9
+2:15.117 - Yoshi / Stellar Sled
+2:15.117 - Bowser Jr. / Stellar Sled
+2:15.117 - Mario / Funky Dorrie
+2:15.117 - Wario / Pipe Frame
+2:15.122 - Baby Mario / Standard Kart
+2:15.122 - Toadette / Loco Moto
+2:15.123 - Chargin' Chuck / Funky Dorrie
+2:15.123 - Waluigi / Funky Dorrie
+2:15.123 - Bowser / Dread Sled
+2:15.125 - Baby Peach / Lobster Roller
+2:15.125 - Baby Mario / Stellar Sled
+2:15.125 - Baby Luigi / Chargin' Truck
+2:15.125 - Baby Luigi / Mecha Trike
+2:15.125 - Baby Rosalina / Chargin' Truck
+2:15.125 - Baby Rosalina / Mecha Trike
+2:15.125 - Yoshi / Standard Kart
+2:15.125 - Bowser Jr. / Standard Kart
+2:15.125 - Luigi / Loco Moto
+2:15.125 - Penguin / Loco Moto
+2:15.209 - Baby Luigi / Lobster Roller
+2:15.209 - Baby Rosalina / Lobster Roller
+2:15.209 - Toad / Stellar Sled
+2:15.209 - Koopa Troopa / Stellar Sled
+2:15.209 - Daisy / Rally Kart
+2:15.209 - Daisy / Cloud 9
+2:15.209 - Yoshi / Blastronaut III
+2:15.209 - Bowser Jr. / Blastronaut III
+2:15.214 - Pauline / Dread Sled
+2:15.214 - King Boo / Rally Kart
+2:15.214 - King Boo / Cloud 9
+2:15.214 - Rosalina / Rally Kart
+2:15.214 - Rosalina / Cloud 9
+2:15.214 - Bowser / Pipe Frame
+2:15.219 - Baby Mario / Blastronaut III
+2:15.219 - Toad / Standard Kart
+2:15.219 - Koopa Troopa / Standard Kart
+2:15.303 - Baby Peach / Stellar Sled
+2:15.303 - Toadette / Rally Kart
+2:15.303 - Toadette / Cloud 9
+2:15.303 - Toad / Blastronaut III
+2:15.303 - Koopa Troopa / Blastronaut III
+2:15.303 - Yoshi / Loco Moto
+2:15.303 - Bowser Jr. / Loco Moto
+2:15.306 - Daisy / Funky Dorrie
+2:15.306 - Mario / Dread Sled
+2:15.306 - Luigi / Rally Kart
+2:15.306 - Luigi / Cloud 9
+2:15.306 - Penguin / Rally Kart
+2:15.306 - Penguin / Cloud 9
+2:15.306 - Pauline / Pipe Frame
+2:15.306 - Wario / Standard Bike
+2:15.311 - King Boo / Funky Dorrie
+2:15.311 - Rosalina / Funky Dorrie
+2:15.311 - Chargin' Chuck / Dread Sled
+2:15.311 - Waluigi / Dread Sled
+2:15.315 - Baby Peach / Standard Kart
+2:15.315 - Baby Mario / Loco Moto
+2:15.391 - Luigi / Funky Dorrie
+2:15.391 - Penguin / Funky Dorrie
+2:15.391 - Wario / Biddybuggy
+2:15.391 - Chargin' Chuck / Pipe Frame
+2:15.391 - Waluigi / Pipe Frame
+2:15.391 - Bowser / Standard Bike
+2:15.399 - Baby Peach / Blastronaut III
+2:15.399 - Baby Luigi / Standard Kart
+2:15.399 - Baby Rosalina / Standard Kart
+2:15.399 - Toad / Loco Moto
+2:15.399 - Koopa Troopa / Loco Moto
+2:15.400 - Baby Luigi / Stellar Sled
+2:15.400 - Baby Rosalina / Stellar Sled
+2:15.400 - Toadette / Funky Dorrie
+2:15.400 - Mario / Pipe Frame
+2:15.485 - Daisy / Dread Sled
+2:15.485 - Yoshi / Rally Kart
+2:15.485 - Yoshi / Cloud 9
+2:15.485 - Bowser Jr. / Rally Kart
+2:15.485 - Bowser Jr. / Cloud 9
+2:15.485 - Pauline / Standard Bike
+2:15.488 - King Boo / Dread Sled
+2:15.488 - Rosalina / Dread Sled
+2:15.488 - Bowser / Biddybuggy
+2:15.496 - Baby Mario / Rally Kart
+2:15.496 - Baby Mario / Cloud 9
+2:15.496 - Baby Luigi / Blastronaut III
+2:15.496 - Baby Rosalina / Blastronaut III
+2:15.496 - Baby Peach / Loco Moto
+2:15.581 - Baby Mario / Funky Dorrie
+2:15.581 - Toadette / Dread Sled
+2:15.581 - Toad / Rally Kart
+2:15.581 - Toad / Cloud 9
+2:15.581 - Koopa Troopa / Rally Kart
+2:15.581 - Koopa Troopa / Cloud 9
+2:15.581 - Daisy / Pipe Frame
+2:15.581 - Mario / Standard Bike
+2:15.582 - Yoshi / Funky Dorrie
+2:15.582 - Bowser Jr. / Funky Dorrie
+2:15.582 - Luigi / Dread Sled
+2:15.582 - Penguin / Dread Sled
+2:15.582 - Pauline / Biddybuggy
+2:15.582 - King Boo / Pipe Frame
+2:15.582 - Rosalina / Pipe Frame
+2:15.582 - Wario / Rally Bike
+2:15.582 - Wario / Dolphin Dasher
+2:15.582 - Chargin' Chuck / Standard Bike
+2:15.582 - Waluigi / Standard Bike
+2:15.593 - Baby Luigi / Loco Moto
+2:15.593 - Baby Rosalina / Loco Moto
+2:15.667 - Chargin' Chuck / Biddybuggy
+2:15.667 - Waluigi / Biddybuggy
+2:15.667 - Bowser / Rally Bike
+2:15.667 - Bowser / Dolphin Dasher
+2:15.678 - Baby Peach / Rally Kart
+2:15.678 - Baby Peach / Cloud 9
+2:15.678 - Toadette / Pipe Frame
+2:15.678 - Toad / Funky Dorrie
+2:15.678 - Koopa Troopa / Funky Dorrie
+2:15.678 - Mario / Biddybuggy
+2:15.678 - Luigi / Pipe Frame
+2:15.678 - Penguin / Pipe Frame
+2:15.763 - Yoshi / Dread Sled
+2:15.763 - Bowser Jr. / Dread Sled
+2:15.763 - Pauline / Rally Bike
+2:15.763 - Pauline / Dolphin Dasher
+2:15.763 - King Boo / Standard Bike
+2:15.763 - Rosalina / Standard Bike
+2:15.774 - Baby Peach / Funky Dorrie
+2:15.774 - Baby Mario / Dread Sled
+2:15.774 - Baby Luigi / Rally Kart
+2:15.774 - Baby Luigi / Cloud 9
+2:15.774 - Baby Rosalina / Rally Kart
+2:15.774 - Baby Rosalina / Cloud 9
+2:15.774 - Daisy / Standard Bike
+2:15.859 - Baby Luigi / Funky Dorrie
+2:15.859 - Baby Rosalina / Funky Dorrie
+2:15.859 - Toad / Dread Sled
+2:15.859 - Koopa Troopa / Dread Sled
+2:15.859 - Daisy / Biddybuggy
+2:15.859 - Yoshi / Pipe Frame
+2:15.859 - Bowser Jr. / Pipe Frame
+2:15.859 - Mario / Rally Bike
+2:15.859 - Mario / Dolphin Dasher
+2:15.859 - Luigi / Standard Bike
+2:15.859 - Penguin / Standard Bike
+2:15.860 - King Boo / Biddybuggy
+2:15.860 - Rosalina / Biddybuggy
+2:15.860 - Chargin' Chuck / Rally Bike
+2:15.860 - Chargin' Chuck / Dolphin Dasher
+2:15.860 - Waluigi / Rally Bike
+2:15.860 - Waluigi / Dolphin Dasher
+2:15.873 - Baby Mario / Pipe Frame
+2:15.873 - Toadette / Standard Bike
+2:15.957 - Luigi / Biddybuggy
+2:15.957 - Penguin / Biddybuggy
+2:15.958 - Baby Peach / Dread Sled
+2:15.958 - Toadette / Biddybuggy
+2:15.958 - Toad / Pipe Frame
+2:15.958 - Koopa Troopa / Pipe Frame
+2:16.042 - King Boo / Rally Bike
+2:16.042 - King Boo / Dolphin Dasher
+2:16.042 - Rosalina / Rally Bike
+2:16.042 - Rosalina / Dolphin Dasher
+2:16.055 - Baby Luigi / Dread Sled
+2:16.055 - Baby Rosalina / Dread Sled
+2:16.055 - Daisy / Rally Bike
+2:16.055 - Daisy / Dolphin Dasher
+2:16.055 - Yoshi / Standard Bike
+2:16.055 - Bowser Jr. / Standard Bike
+2:16.057 - Baby Peach / Pipe Frame
+2:16.057 - Baby Mario / Standard Bike
+2:16.140 - Yoshi / Biddybuggy
+2:16.140 - Bowser Jr. / Biddybuggy
+2:16.140 - Luigi / Rally Bike
+2:16.140 - Luigi / Dolphin Dasher
+2:16.140 - Penguin / Rally Bike
+2:16.140 - Penguin / Dolphin Dasher
+2:16.154 - Baby Mario / Biddybuggy
+2:16.154 - Baby Luigi / Pipe Frame
+2:16.154 - Baby Rosalina / Pipe Frame
+2:16.154 - Toadette / Rally Bike
+2:16.154 - Toadette / Dolphin Dasher
+2:16.154 - Toad / Standard Bike
+2:16.154 - Koopa Troopa / Standard Bike
+2:16.239 - Toad / Biddybuggy
+2:16.239 - Koopa Troopa / Biddybuggy
+2:16.337 - Yoshi / Rally Bike
+2:16.337 - Yoshi / Dolphin Dasher
+2:16.337 - Bowser Jr. / Rally Bike
+2:16.337 - Bowser Jr. / Dolphin Dasher
+2:16.341 - Baby Peach / Biddybuggy
+2:16.341 - Baby Mario / Rally Bike
+2:16.341 - Baby Mario / Dolphin Dasher
+2:16.341 - Baby Luigi / Standard Bike
+2:16.341 - Baby Rosalina / Standard Bike
+2:16.438 - Baby Luigi / Biddybuggy
+2:16.438 - Baby Rosalina / Biddybuggy
+2:16.438 - Toad / Rally Bike
+2:16.438 - Toad / Dolphin Dasher
+2:16.438 - Koopa Troopa / Rally Bike
+2:16.438 - Koopa Troopa / Dolphin Dasher
+2:16.541 - Baby Peach / Rally Bike
+2:16.541 - Baby Peach / Dolphin Dasher
+2:16.626 - Baby Luigi / Rally Bike
+2:16.626 - Baby Luigi / Dolphin Dasher
+2:16.626 - Baby Rosalina / Rally Bike
+2:16.626 - Baby Rosalina / Dolphin Dasher

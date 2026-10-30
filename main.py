@@ -4,12 +4,12 @@ import os, time
 
 filePathTimings = "timings.txt" # SINGLE
 fileNameResults = "results"
-filePathDir = "usedTimings/normal" # MULTIPLE
+filePathDir = "usedTimings/snes" # MULTIPLE
 filePathResults = "allResults"
 
 # settings for now
-calcMultiple = False
-logTime = True
+calcMultiple = True
+logTime = False
 mode = 0 # 0: normal, 1: best vehicle, 2: best character
 
 # limits, keep empty to include all
