@@ -11,15 +11,8 @@ def runCalcs(listOfTimings, baseCombo: int, limits, tFileName: str, rFileName: s
     if timeLog: endTime = time.perf_counter()
     dIO.exAsTxtFile(tFileName, rFileName, resultSorted, result[1], endTime - startTime if timeLog else "")
 
+# convert a timestamp to milliseconds
 def timeToMils(inputTime: str):
-    """
-    Converts a timestamp (M:ss.mmm) to milliseconds.
-
-    Parameters:
-    -----------
-    inputTime: str
-        The timestamp
-    """
     ms = 0.0
     tmStp = re.split(r"[:.]", inputTime)
     
@@ -31,15 +24,8 @@ def timeToMils(inputTime: str):
     ms = float(tmStp[0]*60000 + tmStp[1]*1000 + tmStp[2])
     return ms
 
+# convert milliseconds to a timestamp
 def milsToTime(inputTime: int):
-    """
-    Converts a milliseconds into a timestamp (M:ss.mmm).
-
-    Parameters:
-    -----------
-    inputTime: int
-        The time in milliseconds
-    """
     inputTime = int(round(inputTime))
 
     mins = str(inputTime // 60000)
@@ -50,6 +36,7 @@ def milsToTime(inputTime: int):
 
     return timestamp
 
+# calculates the speed for each section
 def calcSectSpeed(timings, stats):
     gts = ["r", "t", "w", "n", "o", "g", "x"]
     speedList = []
@@ -84,6 +71,7 @@ def calcSectSpeed(timings, stats):
 
     return speedList
 
+# calculates the time of each section from the base run
 def calcBaseSections(timings: int):
     sect, gtTimes = [], [0, 0, 0, 0, 0, 0, 0]
     gts = ["r", "t", "w", "n", "o", "g", "x"]
@@ -115,6 +103,7 @@ def calcBaseSections(timings: int):
 
     return [sect, gtTimes]
 
+# loops through all combos and calculates their time
 def calcLoop(timings, baseCombo: int, limits, calcLog = False, timeLog = False):
     """
     Loops through all combos
