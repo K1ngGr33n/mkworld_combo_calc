@@ -1,8 +1,8 @@
 import re
 
 # stat/coin curve CSVs
-csvCharStats = open("csv/charStats.csv", "r", encoding="utf-8") # Name,Index,RS,TS,WS,GS,AC,MT,CC
-csvVehStats = open("csv/vehStats.csv", "r", encoding="utf-8") # Name,Index,RS,TS,WS,GS,AC,MT,CC
+csvCharStats = open("csv/charStats.csv", "r", encoding="utf-8") # Name,Index,RS,TS,WS,GS,OS,RaS,WaS,CC
+csvVehStats = open("csv/vehStats.csv", "r", encoding="utf-8") # Name,Index,RS,TS,WS,GS,OS,RaS,WaS,CC
 csvCoinCurve = open("csv/coinCurve.csv", "r", encoding="utf-8") # S/C,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
 
 # test stuff
@@ -70,7 +70,7 @@ def getStats(pos: int):
     csvCoinCurve.seek(0)
     for e in csvCoinCurve:
             current = list(filter(None, re.split(r"[,\n]", e))) # convert line in csv file to list
-            if current[0] == str(returnVal[0][6]): # check against given index
+            if current[0] == str(returnVal[0][-1]): # check against given index
                 for i in range(len(current)-1): # convert numbers to int
                     current[i+1] = float(current[i+1])
                     returnVal[1] = current[1:]
