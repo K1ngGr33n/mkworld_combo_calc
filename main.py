@@ -1,3 +1,7 @@
+### TODO: 
+# - apply stat scaling to calcHandler.py
+# - adjust stats.py for new stat files
+
 import dataIO as dIO
 import calcHandler as cH
 import os, time

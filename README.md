@@ -34,29 +34,34 @@ Every time the **ground type changes** or the run **collects a coin**, you need 
 
 Every line must be structured like this: ```0:00.000 a```
 
-The first part is the **timestamp of the event.** You can simply use the in-game timer.
-The second part is a **tag** that stands for the event, which you can look up in this list:
+The first part is the **timestamp of the event.** You can simply use the in-game timer for this.
+The second part is a **tag** that marks the event. You can look them up in this list:
 ```
 r - Road (Concrete, Wood, Asphalt...)
 t - Terrain (Mud, Sand, Dirt... (NOT offroad))
 w - Water (Places where your kart becomes a jetski, and sometimes shallow water)
-
-n - Neutral (Rails and Walls)
 g - Gliders
+
+c - Coin collection
+
 o - Offroad
+rl - Rails
+wl - Walls
 x - None (Cannon Gliders)
 
-h - item hit (-3 coins)
+h - item hit or respawn (-3 coins)
 sh - shock hit (-2 coins)
 
 e - End of the run
 ```
 
-You can use ```#``` at the start of a line to skip that line. This can be used for comments: 
+You can use ```#``` at the start of a line to skip that line. This can be used for comments. 
+Putting the comment after the event will not ignore the line.
 ```
 1:12.546 r
 # lap 3     <-- this line will be ignored 
 1:14.567 t
+1:20.242 c # new strat    <-- this line will not be ignored
 ```
 
 #### Ending

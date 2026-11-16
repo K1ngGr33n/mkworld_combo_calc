@@ -71,10 +71,11 @@ def exAsTxtFile(orgFile: str, filepath: str, times, gtTimes, calcTime):
         prct.append(round(e / totalTime * 100, 2))
 
     # start of results file
+    # "r", "t", "w", "g", "o", "rl", "wl", "x"
     formattedText = f'''Read from file "{orgFile}"
 Road: {gts[0]} ({prct[0]}%) | Terrain: {gts[1]} ({prct[1]}%) | Water: {gts[2]} ({prct[2]}%)
-Neutral: {gts[3]} ({prct[3]}%) | Offroad: {gts[4]} ({prct[4]}%) | Gliders: {gts[5]} ({prct[5]}%)
-None: {gts[6]} ({prct[5]}%)
+Gliders: {gts[3]} ({prct[3]}%) | Offroad: {gts[4]} ({prct[4]}%) | Rails: {gts[5]} ({prct[5]}%)
+Walls: {gts[6]} ({prct[6]}%) | None: {gts[7]} ({prct[7]}%)
 Total Time: {cH.milsToTime(totalTime)} {f"(finished in {round(calcTime, 4)}s)" if calcTime != "" else ""}
 '''
 

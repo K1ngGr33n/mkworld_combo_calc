@@ -1,26 +1,26 @@
-Pipe Frame,0,-3,-3,-3,0,0,0,0,4,4,2,-2,1,1,1,0,0,2,0,-3
-Standard Kart,1,0,0,0,0,0,0,0,1,1,1,-1,0,0,0,0,0,0,0,-1
-Reel Racer,2,3,3,3,0,0,0,0,-2,-2,0,0,-1,-1,-1,0,0,-2,0,1
-Baby Blooper,3,2,-3,-3,0,0,0,0,2,2,2,-2,4,0,0,0,0,2,0,-3
-B-Dasher,4,3,-1,-1,0,0,0,0,0,0,0,0,3,-2,-2,0,0,0,0,0
-Big Horn,5,4,1,1,0,0,0,0,-2,-2,-2,2,2,-4,-4,0,0,-2,0,3
-Biddybuggy,6,-4,1,-4,0,0,0,0,3,3,2,-2,0,4,0,0,0,2,0,-2
-Rally Kart,7,-1,3,-1,0,0,0,0,0,0,0,0,-2,3,-2,0,0,0,0,1
-Chargin' Truck,8,2,5,2,0,0,0,0,-3,-3,-2,2,-4,2,-4,0,0,-2,0,4
-Unused water vehicle,9,-4,-4,1,1,0,0,0,3,3,2,-2,0,0,4,0,0,2,0,-2
-Cloud 9,10,-1,-1,3,1,0,0,0,0,0,0,0,-2,-2,3,0,0,0,0,1
-Mecha Trike,11,2,2,5,1,0,0,0,-3,-3,-2,2,-4,-4,2,0,0,-2,0,4
-Standard Bike,12,-4,-4,-4,0,0,0,0,5,5,3,-3,2,2,2,0,0,2,0,-4
-Loco Moto,13,-1,-1,-1,0,0,0,0,2,2,2,-2,1,1,1,0,0,1,0,-2
-Blastronaut III,14,0,0,0,0,0,0,0,2,2,0,0,-2,-2,-2,0,0,0,0,-1
-W-Twin Chopper,15,2,2,2,0,0,0,0,-1,-1,1,-1,0,0,0,0,0,-1,0,0
-Junkyard Hog,16,3,3,3,0,0,0,0,-1,-1,-1,1,-3,-3,-3,0,0,-2,0,1
-R.O.B. H.O.G.,17,1,-4,-4,0,0,0,0,3,3,3,-3,5,1,1,0,0,3,0,-4
-Rallygator,18,4,1,1,0,0,0,0,-1,-1,-3,3,0,-6,-6,0,0,-2,0,3
-Rally Bike,19,-5,0,-5,0,0,0,0,4,4,3,-3,1,5,1,0,0,3,0,-3
-Dread Sled,20,-2,4,0,0,0,0,0,-1,-1,0,0,-2,4,-1,0,0,0,0,1
-Dolphin Dasher,21,-5,-5,0,1,0,0,0,4,4,3,-3,1,1,5,0,0,3,0,-3
-Funky Dorrie,22,-1,-1,3,1,0,0,0,1,1,-1,1,-4,-4,1,0,0,0,0,1
-Lobster Roller,23,2,2,5,1,0,0,0,-2,-2,-3,3,-6,-6,0,0,0,-2,0,4
-Stellar Sled,24,1,3,6,1,0,0,0,-4,-4,-2,2,-4,-3,3,0,0,-2,0,4
-#Name,ID,TopSpeedTarmac,TopSpeedGravel,TopSpeedWater,TopSpeedGlide,TopSpeedDirt,TopSpeedRailSlide,TopSpeedWallRide,Acceleration,DriftDashTime,CoinSpeedRatio,Weight,HandlingTarmac,HandlingGravel,HandlingWater,HandlingGlide,HandlingDirt,HandlingGrip,TireGrip,InvincibleRatio
+Pipe Frame,0,-3,-3,-3,0,0,0,0,2
+Standard Kart,1,0,0,0,0,0,0,0,1
+Reel Racer,2,3,3,3,0,0,0,0,0
+Baby Blooper,3,2,-3,-3,0,0,0,0,2
+B-Dasher,4,3,-1,-1,0,0,0,0,0
+Big Horn,5,4,1,1,0,0,0,0,-2
+Biddybuggy,6,-4,1,-4,0,0,0,0,2
+Rally Kart,7,-1,3,-1,0,0,0,0,0
+Chargin' Truck,8,2,5,2,0,0,0,0,-2
+#Unused water vehicle,9,-4,-4,1,1,0,0,0,2
+Cloud 9,10,-1,-1,3,1,0,0,0,0
+Mecha Trike,11,2,2,5,1,0,0,0,-2
+Standard Bike,12,-4,-4,-4,0,0,0,0,3
+Loco Moto,13,-1,-1,-1,0,0,0,0,2
+Blastronaut III,14,0,0,0,0,0,0,0,0
+W-Twin Chopper,15,2,2,2,0,0,0,0,1
+Junkyard Hog,16,3,3,3,0,0,0,0,-1
+R.O.B. H.O.G.,17,1,-4,-4,0,0,0,0,3
+Rallygator,18,4,1,1,0,0,0,0,-3
+Rally Bike,19,-5,0,-5,0,0,0,0,3
+Dread Sled,20,-2,4,0,0,0,0,0,0
+Dolphin Dasher,21,-5,-5,0,1,0,0,0,3
+Funky Dorrie,22,-1,-1,3,1,0,0,0,-1
+Lobster Roller,23,2,2,5,1,0,0,0,-3
+Stellar Sled,24,1,3,6,1,0,0,0,-2
+#Name,ID,TopSpeedTarmac,TopSpeedGravel,TopSpeedWater,TopSpeedGlide,TopSpeedDirt,TopSpeedRailSlide,TopSpeedWallRide,CoinSpeedRatio

@@ -41,10 +41,12 @@ def getStats(pos: int):
     # 
     # character
     #
+    # pos = [c, v]
     csvCharStats.seek(0)
     for e in csvCharStats:
         current = list(filter(None, re.split(r"[,\n]", e))) # convert line in csv file to list
-        if current[1] == str(pos[0]): # check against given index
+        if current[1] == str(pos[0]) and current[0][0] is not '#': # check against given index / skip line if name starts with # 
+            print(current)
             for i in range(len(current)-2): # convert numbers to int
                 current[i+2] = int(current[i+2])
             returnVal[0] = current[2:]
@@ -56,7 +58,8 @@ def getStats(pos: int):
     csvVehStats.seek(0)
     for e in csvVehStats:
         current = list(filter(None, re.split(r"[,\n]", e))) # convert line in csv file to list
-        if current[1] == str(pos[1]): # check against given index
+        if current[1] == str(pos[1]) and current[0][0] is not '#': # check against given index / skip line if name starts with # 
+            print(current)
             for i in range(len(current)-2): # convert numbers to int
                 current[i+2] = int(current[i+2])
             for i in range(len(returnVal[0])): # add stats onto character stats
@@ -78,3 +81,4 @@ def getStats(pos: int):
     return returnVal
 
 # print(f"{getStats(testInputCombo)}\n{getNames(testInputCombo)}")
+# print(getStats([1, 1]))

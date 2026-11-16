@@ -2,6 +2,12 @@ import stats as st
 import dataIO as dIO
 import time, re
 
+# stat scalings
+#         TST,    TSG,    TSW,    TSG,    TSD,    TSRS,   TSWR,   CSR
+#         RS      TS      WS      GS      OS      RaS     WaS     CC
+srBase = [0.9670, 0.9700, 0.9400, 0.9500, 1.0000, 0.9500, 0.9500, 0.5000]
+srScal = [0.0030, 0.0030, 0.0060, 0.0050, 0.0000, 0.0050, 0.0050, 0.0500]
+
 def runCalcs(listOfTimings, baseCombo: int, limits, tFileName: str, rFileName: str, mode = 0, calcLog = False, timeLog = False):
     if timeLog: startTime = time.perf_counter()
     result = calcLoop(listOfTimings, baseCombo, limits, calcLog)
@@ -38,43 +44,41 @@ def milsToTime(inputTime: int):
 
 # calculates the speed for each section
 def calcSectSpeed(timings, stats):
-    gts = ["r", "t", "w", "n", "o", "g", "x"]
+    #      TST, TSG, TSW, TSG, TSD, TSRS,TSWR
+    #      RS   TS   WS   GS   OS   RaS  WaS  
+    gts = ["r", "t", "w", "g", "o", "rl", "wl", "x"]
     speedList = []
     pos = 0
 
-    boost = 0
     coinCount = 0
 
-    speed = 100.0
+    speed = 1
     for e in timings:
+        # section is a coin grab 
         if e[1].lower() == "c":
-            if coinCount < 20: # coins
+            if coinCount < 20: 
                 coinCount += 1
+        # section is an item or shock hit
         elif e[1].lower() == "h" or e[1].lower() == "sh": 
-            coinCount -= 3 if e[1].lower() == "h" else 2 # hit 
+            coinCount -= 3 if e[1].lower() == "h" else 2 
             if coinCount < 0:
                 coinCount = 0
+        # TST,TSG,TSW,TSG,TSD,TSRS,TSWR,CSR
         else:
             pos = gts.index(e[1].lower())
-        if pos < 2: # road/terrain
-            speed = (100 + (0.312 * stats[0][pos])) * (1 + stats[1][coinCount]/100)
-        elif pos == 2: # water
-            speed = (90 + (0.312 * stats[0][pos])) * (1 + stats[1][coinCount]/100)
-        elif pos < 5: # neutral/offroad
-            speed = 100 * (1 + stats[1][coinCount]/100)
-        elif pos == 5: # gliders
-            # speed = 100 * (1 + stats[1][coinCount]/100)
-            speed = (100 + (0.49 * stats[0][3])) * (1 + stats[1][coinCount]/100)
+        if pos < 7: # road, terrain, water, glider, offroad, rail or wall
+            speed = srBase[pos] + srScal[pos] * stats[0][pos] * (1 + stats[1][coinCount]/100)
+        #   speed = base Speed  + scaling     * level         * coin buff
         else: # none
-            speed = 100
+            speed = 1
         speedList.append(speed)
 
     return speedList
 
 # calculates the time of each section from the base run
 def calcBaseSections(timings: int):
-    sect, gtTimes = [], [0, 0, 0, 0, 0, 0, 0]
-    gts = ["r", "t", "w", "n", "o", "g", "x"]
+    sect, gtTimes = [], [0, 0, 0, 0, 0, 0, 0, 0]
+    gts = ["r", "t", "w", "g", "o", "rl", "wl", "x"]
     coins = 0
     groundType = "r"
 
@@ -94,12 +98,7 @@ def calcBaseSections(timings: int):
         
         # calculate total time for each ground type
         pos = gts.index(groundType.lower())
-        if pos < 3 or pos > 4: # gt is r, t, w, g or x
-            gtTimes[pos] += diff
-        elif coins != 0 and coins != 20: # gt is n or o
-            gtTimes[pos] += diff
-        else: 
-            gtTimes[6] += diff
+        gtTimes[pos] += diff
 
     return [sect, gtTimes]
 
