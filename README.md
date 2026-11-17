@@ -12,6 +12,9 @@ _Inspired by a similar project from [cypress](https://github.com/cypress-city)_
 <hr>
 
 ## How to use
+
+Note: you need to have [Python](https://www.python.org/downloads/) installed to run this program. I haven't tested the older versions, but it should work on Python 3.14 and above.
+
 ### Step 1: Clone the GitHub repo
 Make sure you have **git** installed.
 Find the directory where you want the program files to be, then open it in a terminal and run:
