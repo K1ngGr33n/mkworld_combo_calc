@@ -66,9 +66,10 @@ def calcSectSpeed(timings, stats):
         # TST,TSG,TSW,TSG,TSD,TSRS,TSWR,CSR
         else:
             pos = gts.index(e[1].lower())
+        
         if pos < 7: # road, terrain, water, glider, offroad, rail or wall
-            speed = srBase[pos] + srScal[pos] * stats[0][pos] * (1 + stats[1][coinCount]/100)
-        #   speed = base Speed  + scaling     * level         * coin buff
+            speed = (srBase[pos] + srScal[pos] * stats[0][pos]) * (1 + stats[1][coinCount]/100)
+        #   speed = base Speed   + scaling     * level          * coin buff
         else: # none
             speed = 1
         speedList.append(speed)

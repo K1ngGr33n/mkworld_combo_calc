@@ -7,20 +7,20 @@ Big Horn,5,4,1,1,0,0,0,0,-2
 Biddybuggy,6,-4,1,-4,0,0,0,0,2
 Rally Kart,7,-1,3,-1,0,0,0,0,0
 Chargin' Truck,8,2,5,2,0,0,0,0,-2
-#Unused water vehicle,9,-4,-4,1,1,0,0,0,2
-Cloud 9,10,-1,-1,3,1,0,0,0,0
-Mecha Trike,11,2,2,5,1,0,0,0,-2
-Standard Bike,12,-4,-4,-4,0,0,0,0,3
-Loco Moto,13,-1,-1,-1,0,0,0,0,2
-Blastronaut III,14,0,0,0,0,0,0,0,0
-W-Twin Chopper,15,2,2,2,0,0,0,0,1
-Junkyard Hog,16,3,3,3,0,0,0,0,-1
-R.O.B. H.O.G.,17,1,-4,-4,0,0,0,0,3
-Rallygator,18,4,1,1,0,0,0,0,-3
-Rally Bike,19,-5,0,-5,0,0,0,0,3
-Dread Sled,20,-2,4,0,0,0,0,0,0
-Dolphin Dasher,21,-5,-5,0,1,0,0,0,3
-Funky Dorrie,22,-1,-1,3,1,0,0,0,-1
-Lobster Roller,23,2,2,5,1,0,0,0,-3
-Stellar Sled,24,1,3,6,1,0,0,0,-2
+Cloud 9,9,-1,-1,3,1,0,0,0,0
+Mecha Trike,10,2,2,5,1,0,0,0,-2
+Standard Bike,11,-4,-4,-4,0,0,0,0,3
+Loco Moto,12,-1,-1,-1,0,0,0,0,2
+Blastronaut III,13,0,0,0,0,0,0,0,0
+W-Twin Chopper,14,2,2,2,0,0,0,0,1
+Junkyard Hog,15,3,3,3,0,0,0,0,-1
+R.O.B. H.O.G.,16,1,-4,-4,0,0,0,0,3
+Rallygator,17,4,1,1,0,0,0,0,-3
+Rally Bike,18,-5,0,-5,0,0,0,0,3
+Dread Sled,19,-2,4,0,0,0,0,0,0
+Dolphin Dasher,20,-5,-5,0,1,0,0,0,3
+Funky Dorrie,21,-1,-1,3,1,0,0,0,-1
+Lobster Roller,22,2,2,5,1,0,0,0,-3
+Stellar Sled,23,1,3,6,1,0,0,0,-2
 #Name,ID,TopSpeedTarmac,TopSpeedGravel,TopSpeedWater,TopSpeedGlide,TopSpeedDirt,TopSpeedRailSlide,TopSpeedWallRide,CoinSpeedRatio
+#Unused water vehicle,67,-4,-4,1,1,0,0,0,2
