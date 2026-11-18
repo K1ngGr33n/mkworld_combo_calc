@@ -44,7 +44,7 @@ def getStats(pos: int):
     # pos = [c, v]
     csvCharStats.seek(0)
     for e in csvCharStats:
-        current = list(filter(None, re.split(r"[,\n]", e))) # convert line in csv file to list
+        current = list(filter(None, re.split(r"[,\n]", e)))[:10] # convert line in csv file to list
         if current[1] == str(pos[0]) and current[0][0] != '#': # check against given index / skip line if name starts with # 
             for i in range(len(current)-2): # convert numbers to int
                 current[i+2] = int(current[i+2])
@@ -56,7 +56,7 @@ def getStats(pos: int):
     #
     csvVehStats.seek(0)
     for e in csvVehStats:
-        current = list(filter(None, re.split(r"[,\n]", e))) # convert line in csv file to list
+        current = list(filter(None, re.split(r"[,\n]", e)))[:10] # convert line in csv file to list
         if current[1] == str(pos[1]) and current[0][0] != '#': # check against given index / skip line if name starts with # 
             for i in range(len(current)-2): # convert numbers to int
                 current[i+2] = int(current[i+2])
@@ -69,8 +69,8 @@ def getStats(pos: int):
     #
     csvCoinCurve.seek(0)
     for e in csvCoinCurve:
-            current = list(filter(None, re.split(r"[,\n]", e))) # convert line in csv file to list
-            if current[0] == str(returnVal[0][-1]): # check against given index
+            current = list(filter(None, re.split(r"[,\n]", e)))[:10] # convert line in csv file to list
+            if current[0] == str(returnVal[0][7]): # check against given index
                 for i in range(len(current)-1): # convert numbers to int
                     current[i+1] = float(current[i+1])
                     returnVal[1] = current[1:]
@@ -79,4 +79,4 @@ def getStats(pos: int):
     return returnVal
 
 # print(f"{getStats(testInputCombo)}\n{getNames(testInputCombo)}")
-# print(getStats([1, 1]))
+# print(getStats([7, 1]))
