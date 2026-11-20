@@ -69,7 +69,7 @@ def getStats(pos: int):
     #
     csvCoinCurve.seek(0)
     for e in csvCoinCurve:
-            current = list(filter(None, re.split(r"[,\n]", e)))[:10] # convert line in csv file to list
+            current = list(filter(None, re.split(r"[,\n]", e)))[:22] # convert line in csv file to list
             if current[0] == str(returnVal[0][7]): # check against given index
                 for i in range(len(current)-1): # convert numbers to int
                     current[i+1] = float(current[i+1])
