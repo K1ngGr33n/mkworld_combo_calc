@@ -98,7 +98,11 @@ def calcBaseSections(timings: int):
         sect.append([diff, timings[i][1]])
         
         # calculate total time for each ground type
-        pos = gts.index(groundType.lower())
+        if groundType.lower() in gts:
+            pos = gts.index(groundType.lower())
+        else: # ground type tag is not on the list
+            print(f'Error: "{groundType}" is not a valid tag! Please check your timings file.')
+            exit()
         gtTimes[pos] += diff
 
     return [sect, gtTimes]
