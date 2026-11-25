@@ -5,7 +5,7 @@ Note: This program **cannot calculate** time differences from **Acceleration, Ha
 
 You can find my own test results in [this document.](https://docs.google.com/document/d/1vZDuUWTfXXjkFKGuCVNkZw4yabM3KSRRKyNxEDxHIqA/edit?tab=t.wq6qf5cgyyrz)
 
-This program works for these MKWorld versions: **1.7.0; 1.8.0**
+This program works for these MKWorld versions: **1.7.0; 1.8.0; 1.9.0**
 
 _Inspired by a similar project from [cypress](https://github.com/cypress-city)_
 
@@ -38,7 +38,7 @@ Every time the **ground type changes** or the run **collects a coin**, you need 
 
 Every line must be structured like this: ```0:00.000 a```
 
-The first part is the **timestamp of the event.** You can simply use the in-game timer for this.
+The first part is the **timestamp of the event.** You can simply use the in-game timer for this, although a frame accurate timer is preferred.
 The second part is a **tag** that marks the event. You can look them up in this list:
 ```
 r - Road (Concrete, Wood, Asphalt...)
