@@ -26,6 +26,18 @@ def readTextFile(filePath: str):
             # get section and add to timingsList
             if l.strip()[0] != "#": # skip line if comment
                 section = re.split(r"\s+", l.strip())
+
+                a = section[0]
+
+                # convert timestamp to integers + check for invalid timestamp
+                section[0] = re.split(r"[:.]", section[0])
+                try:
+                    for i in range(len(section[0])):
+                        section[0][i] = int(section[0][i][:i+1].ljust(i+1, "0"))
+                except ValueError: # exit if invalid program
+                    print(f'"{a}" is not a valid timestamp!')
+                    exit()
+                
                 section[0] = cH.timeToMils(section[0])
                 timingsList.append(section)
                 if section[1] == "e": # exit if run end ("e") is found

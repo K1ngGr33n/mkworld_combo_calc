@@ -18,16 +18,11 @@ def runCalcs(listOfTimings, baseCombo: int, limits, tFileName: str, rFileName: s
     dIO.exAsTxtFile(tFileName, rFileName, resultSorted, result[1], endTime - startTime if timeLog else "")
 
 # convert a timestamp to milliseconds
-def timeToMils(inputTime: str):
+def timeToMils(inTime: list):
     ms = 0.0
-    tmStp = re.split(r"[:.]", inputTime)
-    
-    for i in range(3):
-        # converts times (M:ss:mmm) to integers
-        tmStp[i] = int(tmStp[i][:i+1].ljust(i+1, "0")) # :3
 
     # add everything together and return
-    ms = float(tmStp[0]*60000 + tmStp[1]*1000 + tmStp[2])
+    ms = float(inTime[0]*60000 + inTime[1]*1000 + inTime[2])
     return ms
 
 # convert milliseconds to a timestamp
@@ -36,7 +31,7 @@ def milsToTime(inputTime: int):
 
     mins = str(inputTime // 60000)
     secs = str((inputTime % 60000) // 1000)[:2].rjust(2, "0")
-    mils = str(inputTime % 1000)[:3].rjust(3, "0")
+    mils = str(inputTime % 1000)[:3].rjust(3, "0") # :3
     
     timestamp = f"{mins}:{secs}.{mils}"
 
