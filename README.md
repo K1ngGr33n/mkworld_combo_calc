@@ -15,12 +15,13 @@ _Inspired by a similar project from [cypress](https://github.com/cypress-city)_
 
 Note: you need to have [Python](https://www.python.org/downloads/) installed to run this program. I haven't tested the older versions, but it should work on Python 3.14 and above.
 
-### Step 1: Clone the GitHub repo
-Make sure you have **git** installed.
+### Step 1: Download the program files
+Make sure you have [Git](https://git-scm.com/install) installed.
 Find the directory where you want the program files to be, then open it in a terminal and run:
 ```
 git clone https://github.com/K1ngGr33n/mkworld_combo_calc.git
 ```
+(alternatively, you can download it as a zip file: `Code > Download ZIP`)
 
 ### Step 2: Create a text file called "timings.txt"
 #### Combo
